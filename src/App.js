@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Solutions from './components/Solutions';
+import Technologies from './components/Techonologies';
+import ServicesCards from './components/ServicesCards';
+import Careers from './pages/Careers';
+import Services from './pages/Services';
+import ExpertTechnologies from './pages/ExpertTechnologies';
+const Home = () => (
+  <div>
+    <ServicesCards/>
+    <Technologies />
+    
+    <Solutions />
+  </div>
+);
 
-function App() {
+const App = () => {
+  const [currentService,setCurrentService]=useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout  currentService={currentService} setCurrentService={setCurrentService}/>}>
+          <Route index element={<Home />} />
+          <Route path="services" element={<Services currentService={currentService} />}/>
+          <Route path="expertise" element={<ExpertTechnologies currentService={currentService} />}/>
+        <Route path="careers" element={<Careers/>}/>
+        </Route>
+        
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
