@@ -162,7 +162,7 @@ export const ServicesDetails = [
     {
         id: 3,
         titleTwo: "Reasons to Choose Our Technical Services",
-        titleOne: "TECHNICAL Support",
+        titleOne: "TECHNICAL SUPPORT",
         description: "Our team provides reliable support, resolving issues and maintaining existing applications effectively.",
         descriptionTwo: [
             "We evaluate various technologies to help you select the most suitable web stack.",

@@ -1,42 +1,81 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import { motion } from "framer-motion";
 import { ServicesDetails } from "../utils/common";
 
 const Services = ({ currentService }) => {
     let serviceToRender = ServicesDetails[currentService];
 
+    const lineVariant = {
+        hidden: { opacity: 0, y: 10 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.2,
+                duration: 0.6,
+                ease: "easeInOut",
+            },
+        }),
+    };
+
     return (
-        <div className="p-4 max-w-4xl mx-auto my-12" style={{maxWidth:'1140px'}}>
+        <div className="p-4 max-w-4xl mx-auto my-12" style={{ maxWidth: '1140px' }}>
             {/* Title One */}
-            <h1 className="text-blue-500 text-xl font-semibold mb-4">
+            <motion.h1
+                className="text-blue-500 text-xl font-semibold mb-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
                 {serviceToRender.titleOne}
-            </h1>
+            </motion.h1>
 
             {/* Description One */}
-            <div className="space-y-6">
+            <motion.div
+                className="space-y-6"
+                initial="hidden"
+                animate="visible"
+            >
                 {serviceToRender.descriptionOne.map((desc, index) => (
-                    <p key={index} className="text-gray-700">
+                    <motion.p
+                        key={index}
+                        className="text-gray-700"
+                        variants={lineVariant}
+                        custom={index}
+                    >
                         {desc}
-                    </p>
+                    </motion.p>
                 ))}
-            </div>
+            </motion.div>
 
-            {/* Margin before Title Two */}
-            <div className="mt-8">
-                {/* Title Two */}
-                <h2 className="text-blue-500 text-lg font-semibold mb-4">
-                    {serviceToRender.titleTwo}
-                </h2>
+            {/* Title Two */}
+            <motion.h2
+                className="text-blue-500 text-lg font-semibold mt-8 mb-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+                {serviceToRender.titleTwo}
+            </motion.h2>
 
-                {/* Description Two with Icons */}
-                <div className="space-y-4">
-                    {serviceToRender.descriptionTwo.map((desc, index) => (
-                        <div key={index} className="flex items-start space-x-2">
-                            <IoIosCheckmarkCircle className="text-blue-500 mt-1 text-2xl" />
-                            <p className="text-gray-700">{desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            {/* Description Two with Icons */}
+            <motion.div
+                className="space-y-4"
+                initial="hidden"
+                animate="visible"
+            >
+                {serviceToRender.descriptionTwo.map((desc, index) => (
+                    <motion.div
+                        key={index}
+                        className="flex items-start space-x-2"
+                        variants={lineVariant}
+                        custom={index}
+                    >
+                        <IoIosCheckmarkCircle className="text-blue-500 mt-1 text-lg md:2xl" />
+                        <p className="text-gray-700">{desc}</p>
+                    </motion.div>
+                ))}
+            </motion.div>
         </div>
     );
 };
