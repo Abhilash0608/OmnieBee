@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import heroOmni from "../assets/heroOmni.jpg";
 import Navbar from "./Navbar";
+import { titles } from "../utils/common";
 
-const titles = [
-  { id: 1, title: "Design, Explore, and Personalize a unique website for your company." },
-  { id: 2, title: "Top-notch Technical Solutions for your company." },
-  { id: 3, title: "IT Consultancy that enhances customer experience and brand loyalty." },
-  { id: 4, title: "5% of customer retention can lead to an increase of 25% in profits." },
-];
+
 
 function Hero({scrollToContact,setCurrentService}) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,7 +33,7 @@ function Hero({scrollToContact,setCurrentService}) {
       }}
     >
       <Navbar isScrolled={isScrolled}  scrollToContact={scrollToContact} setCurrentService={setCurrentService}/>
-      <div className="p-4 flex justify-center w-full rounded-md text-center">
+      <div className="p-4 flex justify-center w-full rounded-md text-center" style={{maxWidth:'1140px'}}>
         <div className="w-full md:w-[60%] lg:w-[40%]">
           <span className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-normal italic mt-4 font-bold">
             {titles[currentIndex].title}

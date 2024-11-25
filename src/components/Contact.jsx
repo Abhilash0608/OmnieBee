@@ -81,21 +81,21 @@ const ContactUs = () => {
             <FaMapMarkerAlt className="text-blue-600 text-4xl ml-auto" />
             <div>
               <h3 className="font-bold">Address</h3>
-              <p className="text-gray-700">123 Main Street, City, Country</p>
+              <p className="text-gray-700">8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045</p>
             </div>
           </div>
           <div className="grid grid-cols-2 place-items-center gap-4">
             <FaPhoneAlt className="text-blue-600 text-4xl ml-auto" />
             <div className="mr-auto">
               <h3 className="font-bold">Phone</h3>
-              <p className="text-gray-700">+123 456 7890</p>
+              <p className="text-gray-700">+91 9505637481</p>
             </div>
           </div>
           <div className="grid grid-cols-2 place-items-center gap-4">
             <FaEnvelope className="text-blue-600 text-4xl ml-auto" />
             <div className="mr-auto">
               <h3 className="font-bold">Email</h3>
-              <p className="text-gray-700">contact@example.com</p>
+              <p className="text-gray-700">omniebeeglobalsolutions@gmail.com</p>
             </div>
           </div>
         </div>

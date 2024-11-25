@@ -120,10 +120,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             <motion.div
                                 ref={dropdownRef}
                                 className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72"
-                                onMouseEnter={() => {
-                                    setExpertHover(true);
-                                    setHover(false);
-                                }}
+                               
                                 onMouseLeave={() => setExpertHover(false)}
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}

@@ -31,6 +31,7 @@ const ExpertTechnologies = ({ currentService }) => {
                     className="space-y-4"
                     initial="hidden"
                     animate="visible"
+                    key={currentService} // Re-trigger animation on state update
                 >
                     {technologyToRender.descriptions.map((desc, index) => (
                         <motion.div

@@ -19,7 +19,13 @@ const Services = ({ currentService }) => {
     };
 
     return (
-        <div className="p-4 max-w-4xl mx-auto my-12" style={{ maxWidth: '1140px' }}>
+        <motion.div
+            key={currentService} // Ensures reanimation on state update
+            className="p-4 max-w-4xl mx-auto my-12"
+            style={{ maxWidth: '1140px' }}
+            initial="hidden"
+            animate="visible"
+        >
             {/* Title One */}
             <motion.h1
                 className="text-blue-500 text-xl font-semibold mb-4"
@@ -31,11 +37,7 @@ const Services = ({ currentService }) => {
             </motion.h1>
 
             {/* Description One */}
-            <motion.div
-                className="space-y-6"
-                initial="hidden"
-                animate="visible"
-            >
+            <motion.div className="space-y-6">
                 {serviceToRender.descriptionOne.map((desc, index) => (
                     <motion.p
                         key={index}
@@ -59,11 +61,7 @@ const Services = ({ currentService }) => {
             </motion.h2>
 
             {/* Description Two with Icons */}
-            <motion.div
-                className="space-y-4"
-                initial="hidden"
-                animate="visible"
-            >
+            <motion.div className="space-y-4">
                 {serviceToRender.descriptionTwo.map((desc, index) => (
                     <motion.div
                         key={index}
@@ -76,7 +74,7 @@ const Services = ({ currentService }) => {
                     </motion.div>
                 ))}
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 

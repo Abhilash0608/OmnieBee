@@ -31,188 +31,164 @@ import travel from '../assets/solutions/travel.png'
 
 
 
-
-
-export const images=[
-    {id:1,src:angular,alt:"angular"},
-    {id:2,src:polymer,alt:"polymer"},
-    {id:1,src:react,alt:"react"},
-    {id:1,src:phython,alt:"phython"},
-    {id:1,src:php,alt:"php"},
-    {id:1,src:nodejs,alt:"nodejs"},
-    {id:1,src:megento,alt:"megento"},
-    {id:1,src:jquery,alt:"jquery"},
-    {id:1,src:java,alt:"java"},
-    {id:1,src:iosandroid,alt:"iosandroid"},
-    {id:1,src:dotnet,alt:"dotnet"},
-    {id:1,src:django,alt:"django"},
-
-]
-
-export const services = [
-    { id: 1, title: "Web Design",
-         description: "We design eye-catching, personalized, and SEO-rich websites with higher conversion rates and easy maintenance." ,
-         src:WebDesign},
-    { id: 2, title: "App Development",
-         description: "We offer secure and user-friendly app development services while ensuring data protection against malware."
-         ,src:WebDevelopment},
-    { id: 3,
-         title: "IT Consultancy",
-          description: "Our IT consultancy services help achieve business goals through high-quality technical resources." ,
-          src:ITconsultancy},
-    { id: 4, 
-        title: "Digital Marketing",
-         description: "We provide tested digital marketing strategies for successful online campaigns on various platforms.",
-         src:DigitalMarketing },
-    { id: 5,
-         title: "Technical Support",
-          description: "Our team provides reliable support, resolving issues and maintaining existing applications effectively.",
-          src:Technical },
-    { id: 6,
-         title: "Consulting",
-          description: "We design innovative strategies, test new technologies, and keep databases protected and up-to-date." ,
-          src:Consulting},
+  export const titles = [
+    { id: 1, title: "Create, Innovate, and Customize a standout website tailored for your brand." },
+    { id: 2, title: "Premium technical solutions crafted to elevate your business." },
+    { id: 3, title: "Expert consultancy to strengthen customer loyalty and enhance user experience." },
+    { id: 4, title: "A 5% improvement in retention can boost profitability by up to 25%." },
 ];
 
 
-export const solutions=[
-    {id:1,description:"Healthcare Helping health care industries scale up their game by providing technical solutions. We are Having experience in providing health care management systems across the globe.",src:healthcare,title:"HEALTHCARE"},
-    {id:2,description:"We are enthusiastic about supporting technology-driven companies aiming to stay ahead in the Banking domain. Our experts offer unmatched guidance for discussing different solutions for global development and technical operations",src:finance,title:"BANKING & FINANCE"},
-    {id:3,description:"Resource One is Having incredible experience in developing online stores and mobile friendly ecommerce apps . Ecommerce being the fastest growing industry , We have an experienced team to cater to your business goals.",src:retail,title:"RETAIL & E-COMMERCE"},
-    {id:4,description:"Education and e-learning- At Resource One, we encourage innovation with technology and support teaching organizations to realize a competitive edge. Technology plays a vital role in revolutionizing educational practices.",src:finance,title:"E-LEARNING & EDUCATION"},
-    {id:5,description:"Our company strives to improve performance, and employ developing technologies such as the Cloud, Social Computing, Mobility, and Big Data Analytics in travel and tourism.",src:finance,title:"TRAVEL & TOURISM"},
+export const images = [
+    { id: 1, src: angular, alt: "Angular Framework" },
+    { id: 2, src: polymer, alt: "Polymer Framework" },
+    { id: 3, src: react, alt: "ReactJS Development" },
+    { id: 4, src: phython, alt: "Python Solutions" },
+    { id: 5, src: php, alt: "PHP Development" },
+    { id: 6, src: nodejs, alt: "Node.js Services" },
+    { id: 7, src: megento, alt: "Magento E-commerce" },
+    { id: 8, src: jquery, alt: "jQuery Libraries" },
+    { id: 9, src: java, alt: "Java Applications" },
+    { id: 10, src: iosandroid, alt: "iOS & Android Apps" },
+    { id: 11, src: dotnet, alt: ".NET Development" },
+    { id: 12, src: django, alt: "Django Framework" },
+];
+
+export const solutions = [
+    { id: 1, description: "Empowering the healthcare sector with scalable and innovative digital tools.", src: healthcare, title: "Healthcare" },
+    { id: 2, description: "Providing comprehensive tech support to finance and banking industries.", src: finance, title: "Banking & Finance" },
+    { id: 3, description: "Tailoring e-commerce platforms to meet the dynamic demands of online retail.", src: retail, title: "Retail & E-commerce" },
+    { id: 4, description: "Transforming education with cutting-edge digital learning solutions.", src: education, title: "E-learning & Education" },
+    { id: 5, description: "Enhancing travel and tourism through innovative digital integrations.", src: travel, title: "Travel & Tourism" },
+];
+
+
+export const services = [
+    { id: 1, title: "Website Design", description: "Crafting visually stunning and user-friendly websites to amplify your online presence.", src: WebDesign },
+    { id: 2, title: "Mobile App Development", description: "Delivering seamless and secure app experiences designed to captivate users.", src: WebDevelopment },
+    { id: 3, title: "Consultancy Solutions", description: "Strategic IT guidance to align technology with your business goals.", src: ITconsultancy },
+    { id: 4, title: "Digital Campaigns", description: "Innovative marketing strategies to drive impactful digital transformations.", src: DigitalMarketing },
+    { id: 5, title: "Tech Support", description: "Reliable technical assistance to ensure uninterrupted operations.", src: Technical },
+    { id: 6, title: "Business Consulting", description: "Custom strategies to enhance processes and secure your data systems.", src: Consulting },
+];
 
 
 
 
-]
 
 export const ServicesDetails = [
     {
         id: 0,
-        titleTwo: "Reasons to Select Our Web Design Solutions",
+        titleTwo: "Why Opt for Our Web Design Services",
         titleOne: "WEB DESIGN",
-        description: "We design eye-catching, personalized, and SEO-rich websites with higher conversion rates and easy maintenance." ,
+        description: "We create modern, user-friendly, and optimized websites that drive results and are easy to maintain.",
         descriptionTwo: [
-            "We strike a perfect balance between quality and affordability.",
-            "Our team ensures your website is optimized for mobile devices.",
-            "Collaboration is key to our process, resulting in outstanding outcomes.",
-            "We develop tailored strategies to enhance your website's effectiveness.",
-            "Our experienced web designers are well-versed in a variety of frameworks and technologies.",
-            "Our designers are skilled in both graphic and traditional design techniques.",
-            "We implement responsive design technologies for optimal viewing on all devices.",
-            "We believe in transparent pricing without hidden costs.",
-            "We take the time to understand our clients and their project histories in detail."
+            "Achieve the perfect balance of quality and cost with our web design solutions.",
+            "We make sure your site performs flawlessly across all mobile devices.",
+            "Collaborating closely with you, we refine designs based on feedback.",
+            "Our strategies are tailored to boost your website's effectiveness.",
+            "We bring expertise in various frameworks and tools to deliver top-notch designs.",
+            "Our team excels in both graphic and traditional design aesthetics.",
+            "Responsive design ensures seamless experiences on any device.",
+            "Our pricing is transparent, with no hidden charges.",
+            "We take the time to deeply understand your brand and vision."
         ],
         descriptionOne: [
-            "At ResourceOne, we focus on delivering top-notch web solutions and IT services at competitive prices. Our expertise encompasses both website and application design and development.",
-            "Our team excels in creating responsive web designs that are compatible with various browsers and platforms, as well as in developing CMS-driven applications and optimizing for search engines.",
-            "We aim to meet your operational objectives while establishing a strong online presence through your website.",
-            "The websites we create are unique, cost-effective, and designed to meet customer satisfaction.",
-            "We believe that valuable content combined with an appealing, straightforward web design is essential for a successful online presence."
+            "Our focus is on building tailored websites that represent your brand and meet your business goals.",
+            "We specialize in responsive designs that adapt to various screen sizes and platforms.",
+            "From CMS integrations to search engine optimization, we prioritize functionality and visibility.",
+            "Our team delivers distinctive and impactful designs to make your brand stand out.",
+            "We combine strong visuals with a user-first approach to enhance your online presence."
         ]
     },
     {
         id: 1,
-        titleTwo: "Reasons to Choose Our Web Development Services",
+        titleTwo: "Why Choose Our Web Development Solutions",
         titleOne: "WEB DEVELOPMENT",
-        description: "We offer secure and user-friendly app development services while ensuring data protection against malware.",
+        description: "We deliver secure and intuitive app development services, protecting your data and engaging users.",
         descriptionTwo: [
-            "Our focus is on delivering solutions that work effectively for your business and audience.",
-            "We engage our clients throughout the development process, incorporating their feedback at every stage.",
-            "We provide web design, development, digital marketing, and application development at competitive prices with a faster turnaround than many competitors.",
-            "Our extensive experience spans across various major industries.",
-            "Our expertise in web development and digital marketing goes beyond our primary services.",
-            "We ensure that every project is user-friendly, easy to manage, and scalable."
+            "We focus on creating solutions that align with your business needs and audience expectations.",
+            "Our process involves you at every step, ensuring your feedback shapes the final product.",
+            "Our team offers comprehensive web and app development at competitive prices.",
+            "With experience across industries, we understand diverse business needs.",
+            "We provide scalable, user-friendly, and manageable development solutions.",
+            "Our services extend beyond coding, focusing on seamless user experiences."
         ],
         descriptionOne: [
-            "Invest in strategic web development services with ResourceOne, where we are dedicated to creating engaging, aesthetically pleasing, and high-quality websites that help your brand stand out.",
-            "We specialize in designing mobile-friendly websites that provide optimal user experiences across platforms, helping you connect with your target audience.",
-            "Our team consists of experts committed to delivering premium websites, understanding the critical role of a strong online presence in today’s digital landscape.",
-            "Our developers prioritize customer satisfaction, recognizing that effective website development involves both design and coding.",
-            "We work closely with clients to address their specific business needs, leveraging our team's knowledge and skills to provide exceptional service."
+            "We craft high-quality websites that reflect your brand and resonate with your audience.",
+            "Our designs ensure optimal user experience, whether on mobile or desktop.",
+            "Our experts bring a mix of creativity and technical expertise to every project.",
+            "We address your unique business challenges with custom-built solutions.",
+            "By integrating design and development, we provide cohesive and impactful websites."
         ]
     },
     {
         id: 2,
-        titleTwo: "Reasons to Opt for Our Digital Marketing Services",
+        titleTwo: "Benefits of Our Digital Marketing Expertise",
         titleOne: "DIGITAL MARKETING",
-        description: "We provide tested digital marketing strategies for successful online campaigns on various platforms.",
+        description: "Our data-driven marketing strategies deliver measurable results across multiple platforms.",
         descriptionTwo: [
-            "Our creations ensure an exceptional experience across all devices, including laptops, desktops, smartphones, and tablets.",
-            "We focus on revitalizing outdated websites to meet modern standards.",
-            "This approach allows your users to stay in sync with the latest technological advancements.",
-            "We invest in real-time analytics and research to implement best practices.",
-            "Our meticulous approach to digital marketing guarantees data security and cohesive design.",
-            "Choosing ResourceOne for digital marketing means accessing container-based app extensions that evolve and offer diverse services.",
-            "Our services are designed for easy adaptability to various design needs.",
-            "We are committed to creating digital marketing solutions from the ground up.",
-            "Utilizing advanced tools and industry best practices, we develop robust and effective digital marketing strategies."
+            "We ensure a flawless user experience across devices and platforms.",
+            "We rejuvenate outdated websites with fresh and modern designs.",
+            "Our strategies keep your audience connected to the latest digital trends.",
+            "Real-time analytics and insights inform our best practices.",
+            "We secure your data and create cohesive marketing designs.",
+            "Our adaptive marketing tools help your business stay relevant in an evolving digital landscape.",
+            "We focus on creating solutions that grow with your business needs.",
+            "From planning to execution, our campaigns deliver impactful results."
         ],
         descriptionOne: [
-            "Whether your goal is to increase conversions, website traffic, or both, we can help you craft an effective online marketing campaign.",
-            "At ResourceOne, we let our results speak for themselves. We approach every project from a business owner's perspective, treating your business as if it were our own.",
-            "Our digital marketing team collaborates with clients to create tailored online marketing strategies that attract qualified visitors.",
-            "Our broad expertise, combined with strategic partnerships, covers every facet of digital marketing.",
-            "We deliver integrated solutions that provide top-tier performance, turning every intention into a successful transaction.",
-            "By leveraging robust platforms, we ensure high performance without sacrificing personalization.",
-            "The most innovative companies deserve teams with proven credentials."
+            "We work with you to increase visibility, traffic, and conversions for your business.",
+            "Our campaigns are tailored to your goals, ensuring a high return on investment.",
+            "We bring a collaborative approach to every project, treating your business as our own.",
+            "Our marketing strategies are built on in-depth market research and analysis.",
+            "We leverage innovative tools and industry expertise to maximize campaign success."
         ]
     },
     {
         id: 3,
-        titleTwo: "Reasons to Choose Our Technical Services",
+        titleTwo: "Why Trust Us for Technical Support",
         titleOne: "TECHNICAL SUPPORT",
-        description: "Our team provides reliable support, resolving issues and maintaining existing applications effectively.",
+        description: "We provide dependable solutions to address technical challenges and enhance performance.",
         descriptionTwo: [
-            "We evaluate various technologies to help you select the most suitable web stack.",
-            "Our technical experts analyze your business requirements to provide a clear understanding of your situation.",
-            "We assist in designing a roadmap, simplifying processes, and creating comprehensive documentation.",
-            "Every solution we develop is tailored to fit your business perfectly.",
-            "Before finalizing the design, we create a proof-of-concept to assess the feasibility of your idea and evaluate the long-term potential of the application.",
-            "Our expert teams ensure a seamless workflow for your organization.",
-            "The system is built on fully automated deployment.",
-            "Your unique mission receives a fresh perspective, as each project is customized to meet the client's specific needs.",
-            "We utilize top-notch tools, model systems, and a deep understanding of technology."
+            "We analyze your needs to determine the most suitable technology stack.",
+            "Our experts simplify complex processes and offer comprehensive support.",
+            "Each solution is customized to meet the unique requirements of your business.",
+            "We create proof-of-concepts to evaluate feasibility and long-term impact.",
+            "Our systems are automated for seamless deployment and maintenance.",
+            "We employ cutting-edge tools to deliver reliable technical solutions."
         ],
         descriptionOne: [
-            "Rapid internet and technology provide an ideal framework for electronic business operations, enabling our team to collaborate effectively on new designs and review implemented strategies.",
-            "Consequently, conducting business across various sectors becomes manageable.",
-            "Technology facilitates instant communication among team members and real-time collaboration with potential business partners.",
-            "Moreover, mobile applications and websites have played a crucial role in helping businesses increase their traffic in recent years.",
-            "The latest trading methods and software require mobile applications from every organization.",
-            "A digital presence strategy is a significant step towards business growth and revenue generation.",
-            "Custom software development is an additional avenue that fosters diversity and adaptability in business practices."
+            "We enable businesses to embrace new technologies and adapt to modern challenges.",
+            "Our team ensures smooth operations by resolving issues promptly.",
+            "Real-time collaboration with our clients ensures every project runs efficiently.",
+            "From mobile applications to cloud solutions, we enhance digital transformation.",
+            "Custom software development enables businesses to innovate and thrive in their industries."
         ]
     },
     {
         id: 4,
-        titleTwo: "Reasons to Choose Our Consultancy Services",
+        titleTwo: "Why Choose Our Expert Consultancy Services",
         titleOne: "CONSULTANCY",
-        description: "We design innovative strategies, test new technologies, and keep databases protected and up-to-date." ,
-       
+        description: "We provide actionable strategies and expert advice to drive business success.",
         descriptionTwo: [
-            "Our IT consultancy services lay the groundwork for automated business processes.",
-            "Managing operations from any location is no longer a significant challenge.",
-            "Our team collaborates effectively to generate innovative ideas and discuss implemented strategies.",
-            "An automated maintenance system represents a substantial advancement towards business growth and revenue generation.",
-            "We embrace innovation and diversity in our business practices.",
-            "We assess strengths, enhance weaknesses, explore opportunities, and mitigate threats.",
-            "You can securely store unlimited data regarding your company, sales, employees, and customers.",
-            "We offer IT support across various domains.",
-            "We prioritize quality in our work by incorporating your ideas and suggestions.",
-            "With teams specializing in digital marketing, web application development, website design, content creation, and more, we have partnered with leading industry experts."
+            "Our consultancy services automate and streamline business processes.",
+            "We facilitate effective collaboration and innovation within your team.",
+            "Our solutions enable you to store and analyze large amounts of data securely.",
+            "We help businesses explore new opportunities and address potential challenges.",
+            "Our partnerships with industry experts ensure top-tier advice and support.",
+            "We provide end-to-end services, including IT, marketing, and web solutions."
         ],
         descriptionOne: [
-            "With extensive experience, we excel in developing integrated solutions and providing actionable insights to help clients achieve their business goals.",
-            "We serve clients across various sectors, including Website Development, Web Design, Digital Marketing, Cloud Computing, Big Data, and more.",
-            "Our experts are proficient in diverse technologies, ensuring that we can provide the best IT consultants with years of experience in their respective fields.",
-            "Our consultancy services help you understand and meet market demands globally, regardless of your industry.",
-            "Our e-learning software developers create solutions for K12 education, higher education, and workforce training.",
-            "ResourceOne is committed to advancing technologies such as the Internet of Things, Cloud Computing, Social Computing, Mobility, and Big Data Analytics."
+            "We collaborate with businesses to design innovative strategies for growth.",
+            "Our experience spans industries, offering solutions tailored to diverse needs.",
+            "From cloud computing to e-learning, we help organizations achieve their goals.",
+            "Our team provides the tools and insights needed to stay ahead in a competitive market.",
+            "By integrating advanced technologies, we enhance efficiency and profitability."
         ]
     }
 ];
+
 
 export const expertiseDetails = [
     {
