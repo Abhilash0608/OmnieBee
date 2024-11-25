@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -72,30 +71,36 @@ const ContactUs = () => {
 
       {/* Right Grid: Contact Info */}
       <motion.div
-        className="bg-gray-100 p-6 flex flex-col items-start justify-center rounded-lg shadow-md space-y-6"
+        className="bg-gray-100 p-6 flex flex-col items-center justify-center rounded-lg shadow-md space-y-6"
         variants={itemVariants}
         custom={1}
       >
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-2 place-items-center gap-4">
-            <FaMapMarkerAlt className="text-blue-600 text-4xl ml-auto" />
-            <div>
+        <div className="flex flex-col gap-8 w-full px-4">
+          <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <FaMapMarkerAlt className="text-blue-600 text-4xl" />
+            <div className=" flex flex-col items-center">
               <h3 className="font-bold">Address</h3>
-              <p className="text-gray-700">8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045</p>
+              <p className="text-gray-700 text-center ">
+                8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 place-items-center gap-4">
-            <FaPhoneAlt className="text-blue-600 text-4xl ml-auto" />
-            <div className="mr-auto">
+          <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <FaPhoneAlt className="text-blue-600 text-4xl " />
+            <div className="flex flex-col items-center">
               <h3 className="font-bold">Phone</h3>
-              <p className="text-gray-700">+91 9505637481</p>
+              <p className="text-gray-700 text-center ">+91 9505637481</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 place-items-center gap-4">
-            <FaEnvelope className="text-blue-600 text-4xl ml-auto" />
-            <div className="mr-auto">
+          <div className="flex flex-col  items-center justify-center gap-4 w-full">
+            <FaEnvelope className="text-blue-600 text-4xl " />
+            <div className="flex flex-col items-center">
               <h3 className="font-bold">Email</h3>
-              <p className="text-gray-700">omniebeeglobalsolutions@gmail.com</p>
+              <p className="text-gray-700 text-center ">
+                <a href="mailto:omniebeeglobalsolutions@gmail.com" className="text-blue-500">
+                  omniebeeglobalsolutions@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

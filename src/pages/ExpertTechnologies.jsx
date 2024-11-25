@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { motion } from "framer-motion";
 import { expertiseDetails } from "../utils/common";
 
 const ExpertTechnologies = ({ currentService }) => {
-    let technologyToRender = expertiseDetails[currentService];
+    const technologyToRender = expertiseDetails[currentService];
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page on render or update
+    }, [currentService]);
 
     const lineVariant = {
         hidden: { opacity: 0, y: 10 },
@@ -28,7 +33,7 @@ const ExpertTechnologies = ({ currentService }) => {
 
                 {/* Description with Icons */}
                 <motion.div
-                    className="space-y-4"
+                    className="flex gelx-col gap-4"
                     initial="hidden"
                     animate="visible"
                     key={currentService} // Re-trigger animation on state update
@@ -36,7 +41,7 @@ const ExpertTechnologies = ({ currentService }) => {
                     {technologyToRender.descriptions.map((desc, index) => (
                         <motion.div
                             key={index}
-                            className="flex items-start space-x-2"
+                            className="flex items-center justify-center space-x-2"
                             variants={lineVariant}
                             custom={index}
                         >

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import logo12 from "../assets/logo12.png";
 import { expertiseDetails, services, ServicesDetails } from "../utils/common";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const Navbar = ({ isScrolled, setCurrentService }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [servicesOpen, setServicesOpen] = useState(false);
     const [hover, setHover] = useState(false);
     const [expertHover, setExpertHover] = useState(false);
 
@@ -15,9 +14,6 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
     const [expertiseAccordionOpen, setExpertiseAccordionOpen] = useState(false);
 
     // Refs for the dropdown and li
-    const servicesRef = useRef(null);
-    const dropdownRef = useRef(null);
-    const expertiseRef = useRef(null)
 
     // Function to handle mouse enter and leave
     const handleMouseEnter = () => setHover(true);
@@ -25,8 +21,9 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
     const scrollToContact = () => {
         const contactSection = document.getElementById("contact"); // Replace with your section's ID
         contactSection?.scrollIntoView({ behavior: "smooth" });
-    };
 
+    };
+    console.log(expertHover,">>")
     return (
         <nav
             className={`${isScrolled
@@ -51,9 +48,8 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     </li>
                     <li
                         className="group relative"
-                        onMouseEnter={() => { handleMouseEnter(); setExpertHover(false) }}
+                        onMouseEnter={() => { handleMouseEnter() }}
                         onMouseLeave={handleMouseLeave}
-                        ref={servicesRef}
                     >
                         <span className="hover:text-blue-500 flex items-center" >
                             Services <IoMdArrowDropdown className="mt-1" />
@@ -62,7 +58,6 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         {hover && (
                             <div>
                                 <motion.div
-                                    ref={dropdownRef}
                                     style={{ width: "500px" }}
                                     className="grid grid-cols-2 absolute rounded-lg top-6 -left-10 bg-white shadow-md space-y-2"
                                     onMouseEnter={() => {
@@ -85,7 +80,6 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                                 }}
                                                 onMouseEnter={() => {
                                                     setHoveredService(service);
-                                                    setExpertHover(false);
                                                 }}
                                             >
                                                 <div className="flex">
@@ -97,7 +91,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                         ))}
                                     </div>
 
-                                    <div className="col-span-1 flex flex-col gap-4 justify-start  p-2 items-start">
+                                    <div className="col-span-1 flex flex-col gap-4 justify-start p-4 items-start">
                                         <h2 className="font-bold text-blue-500">{hoveredService.titleOne}</h2>
                                         <p className="text-left text-sm text-gray-600">{hoveredService.description}</p>
                                         {/* <span className="text-blue-500">Read more ...</span> */}
@@ -108,26 +102,22 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     </li>
                     <li
                         className="group relative"
-                        onMouseEnter={() => { setExpertHover(true); setHover(false) }}
-                        onMouseLeave={() => setExpertHover(false)}
-                        ref={expertiseRef}
+                        onMouseEnter={() => { setExpertHover(true) }}
+                        onMouseLeave={()=>setExpertHover(false)}
+                         // Ensure "Services" dropdown closes
                     >
-                        <span className="hover:text-blue-500 flex items-center" >
+                        <span className="hover:text-blue-500 flex items-center">
                             Expertise <IoMdArrowDropdown className="mt-1 cursor-pointer" />
                         </span>
-                        {/* Dropdown Menu */}
                         {expertHover && (
                             <motion.div
-                                ref={dropdownRef}
-                                className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72"
-                               
-                                onMouseLeave={() => setExpertHover(false)}
+                                className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72 "
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                             >
-                                <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 text-white">
+                                <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 py-2 text-white">
                                     {expertiseDetails.map((expert) => (
                                         <motion.div
                                             key={expert.id}
@@ -151,6 +141,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             </motion.div>
                         )}
                     </li>
+
 
                     <li>
                         <Link to="/careers" className="hover:text-blue-500 cursor-pointer">
@@ -184,7 +175,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                 >
                     <ul className="space-y-4">
                         <li className="text-center">
-                            <Link to="/" className="block " onClick={()=>setMenuOpen(false)}>
+                            <Link to="/" className="block " onClick={() => setMenuOpen(false)}>
                                 Home
                             </Link>
                         </li>

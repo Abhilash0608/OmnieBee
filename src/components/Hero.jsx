@@ -5,7 +5,7 @@ import { titles } from "../utils/common";
 
 
 
-function Hero({scrollToContact,setCurrentService}) {
+function Hero({setCurrentService}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,7 +32,7 @@ function Hero({scrollToContact,setCurrentService}) {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${heroOmni})`,
       }}
     >
-      <Navbar isScrolled={isScrolled}  scrollToContact={scrollToContact} setCurrentService={setCurrentService}/>
+      <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />
       <div className="p-4 flex justify-center w-full rounded-md text-center" style={{maxWidth:'1140px'}}>
         <div className="w-full md:w-[60%] lg:w-[70%]">
           <span className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-normal italic mt-4 font-bold">

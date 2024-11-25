@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Solutions from './components/Solutions';
@@ -8,9 +8,11 @@ import Careers from './pages/Careers';
 import Services from './pages/Services';
 import ExpertTechnologies from './pages/ExpertTechnologies';
 import './index.css'; // Ensure correct path
+import ScrollToTop from './components/ScrollToTop';
 
 const Home = () => (
   <div>
+    <ScrollToTop/>
     <ServicesCards/>
     <Technologies />
     

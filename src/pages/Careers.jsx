@@ -1,6 +1,11 @@
-import { motion } from "framer-motion";
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Careers = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scrolls to the top of the page
+    }, []);
+
     const lineVariant = {
         hidden: { opacity: 0, y: 10 },
         visible: (i) => ({
@@ -9,13 +14,13 @@ const Careers = () => {
             transition: {
                 delay: i * 0.2, // Delay each line by 0.2s
                 duration: 0.6,
-                ease: "easeInOut",
+                ease: 'easeInOut',
             },
         }),
     };
 
     return (
-        <div className="flex flex-col w-full m-auto p-4" style={{ maxWidth: "1140px" }}>
+        <div className="flex flex-col w-full m-auto p-4" style={{ maxWidth: '1140px' }}>
             {/* Page Title */}
             <motion.div
                 className="flex flex-col justify-center items-center"
@@ -28,7 +33,7 @@ const Careers = () => {
                     className="text-3xl font-bold text-blue-500 mb-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    transition={{ duration: 0.6, ease: 'easeInOut' }}
                 >
                     CAREERS
                 </motion.h1>
@@ -73,8 +78,8 @@ const Careers = () => {
                 animate="visible"
             >
                 {[
-                    "BCA / B.E./ B.Tech / MCA / M.Tech or Equivalent",
-                    "Excellent written and verbal communication skills",
+                    'BCA / B.E./ B.Tech / MCA / M.Tech or Equivalent',
+                    'Excellent written and verbal communication skills',
                 ].map((item, index) => (
                     <motion.li key={index} variants={lineVariant} custom={5 + index}>
                         {item}
@@ -88,9 +93,9 @@ const Careers = () => {
                 variants={lineVariant}
                 custom={7}
             >
-                Note: Send your updated resume to{" "}
+                Note: Send your updated resume to{' '}
                 <a href="mailto:omniebeeglobalsolutions@gmail.com" className="text-blue-500">
-                omniebeeglobalsolutions@gmail.com
+                    omniebeeglobalsolutions@gmail.com
                 </a>
             </motion.p>
         </div>

@@ -1,9 +1,25 @@
+import React, { useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { motion } from "framer-motion";
 import { ServicesDetails } from "../utils/common";
 
+
+
 const Services = ({ currentService }) => {
-    let serviceToRender = ServicesDetails[currentService];
+    const serviceToRender = ServicesDetails[currentService];
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top on render
+    }, [currentService]);
+
+    if (!serviceToRender) {
+        return (
+            <div className="text-center text-red-500">
+                <h1 className="text-xl font-bold">Service Not Found</h1>
+                <p>Please select a valid service.</p>
+            </div>
+        );
+    }
 
     const lineVariant = {
         hidden: { opacity: 0, y: 10 },
@@ -22,7 +38,6 @@ const Services = ({ currentService }) => {
         <motion.div
             key={currentService} // Ensures reanimation on state update
             className="p-4 max-w-4xl mx-auto my-12"
-            style={{ maxWidth: '1140px' }}
             initial="hidden"
             animate="visible"
         >
@@ -69,7 +84,7 @@ const Services = ({ currentService }) => {
                         variants={lineVariant}
                         custom={index}
                     >
-                        <IoIosCheckmarkCircle className="text-blue-500 mt-1 text-lg md:2xl" />
+                        <IoIosCheckmarkCircle className="text-blue-500 mt-1 text-lg md:text-2xl" />
                         <p className="text-gray-700">{desc}</p>
                     </motion.div>
                 ))}

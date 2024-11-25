@@ -1,15 +1,14 @@
 import angular from '../assets/languages/angular.jpg'
-import django from '../assets/languages/django.jpg'
-import dotnet from '../assets/languages/dotnet.jpg'
+import typescript from '../assets/languages/typescript.svg'
 import iosandroid from '../assets/languages/iosandroid.jpg'
-import java from '../assets/languages/java.jpg'
+import next from '../assets/languages/next.svg'
 import jquery from '../assets/languages/jquery.jpg'
-import megento from '../assets/languages/megento.jpg'
+import js from '../assets/languages/js.svg'
 import nodejs from '../assets/languages/nodejs.jpg'
-import php from '../assets/languages/php.jpg'
-import phython from '../assets/languages/phython.jpg'
-import polymer from '../assets/languages/polymer.jpg'
+import html from '../assets/languages/html.svg'
+import vuejs from '../assets/languages/vuejs.svg'
 import react from '../assets/languages/react.jpg'
+
 import Consulting from '../assets/SERVICES/Consulting.png'
 import DigitalMarketing from '../assets/SERVICES/DigitalMarketing.png'
 
@@ -41,17 +40,15 @@ import travel from '../assets/solutions/travel.png'
 
 export const images = [
     { id: 1, src: angular, alt: "Angular Framework" },
-    { id: 2, src: polymer, alt: "Polymer Framework" },
+    { id: 2, src: next, alt: "Next Js" },
     { id: 3, src: react, alt: "ReactJS Development" },
-    { id: 4, src: phython, alt: "Python Solutions" },
-    { id: 5, src: php, alt: "PHP Development" },
+    { id: 4, src: vuejs, alt: "Vue Js" },
+    { id: 5, src: js, alt: "Javascript" },
     { id: 6, src: nodejs, alt: "Node.js Services" },
-    { id: 7, src: megento, alt: "Magento E-commerce" },
+    { id: 7, src: typescript, alt: "Typescript" },
     { id: 8, src: jquery, alt: "jQuery Libraries" },
-    { id: 9, src: java, alt: "Java Applications" },
+    { id: 9, src: html, alt: "HTML" },
     { id: 10, src: iosandroid, alt: "iOS & Android Apps" },
-    { id: 11, src: dotnet, alt: ".NET Development" },
-    { id: 12, src: django, alt: "Django Framework" },
 ];
 
 export const solutions = [
@@ -281,17 +278,6 @@ export const expertiseDetails = [
         "Our iOS developers implement the latest UI/UX design trends for attractive and user-friendly applications.",
         "We recommend the best engagement model, timelines, and budget based on project requirements.",
         "Our developed iOS applications provide lightning-fast user experiences, loading within just five seconds."
-      ]
-    },
-    {
-      id: 9,
-      title: "Hybrid-Cross Platform",
-      descriptions: [
-        "ResourceOne provides top-tier hybrid cross-platform application services with an in-house team of skilled developers.",
-        "We have extensive experience in managing various hybrid cross-platform development projects, including expertise in the Ionic platform.",
-        "Hybrid cross-platform apps are developed using single scripting languages like CSS, HTML, and Java.",
-        "Our reusable single-codebase approach ensures cost-effective and efficient development.",
-        "Our team includes experts in graphic designing, content curation, and digital marketing, making us a one-stop solution for app development and marketing."
       ]
     }
   ];
