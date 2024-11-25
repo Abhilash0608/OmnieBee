@@ -20,7 +20,7 @@ const Solutions = () => {
     };
 
     return (
-        <div className="bg-black py-12 my-4 text-white w-full">
+        <div className="bg-black py-12 px-4 my-4 text-white w-full">
             {/* Header Section */}
             <div className="grid gap-8 m-auto" style={{ maxWidth: "1140px" }}>
                 <div className="text-center mb-8">

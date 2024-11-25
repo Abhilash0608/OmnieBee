@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import ExpertTechnologies from './pages/ExpertTechnologies';
 import './index.css'; // Ensure correct path
 import ScrollToTop from './components/ScrollToTop';
+import ContactUs from './pages/ContactUs';
 
 const Home = () => (
   <div>
@@ -29,6 +30,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="services" element={<Services currentService={currentService} />}/>
           <Route path="expertise" element={<ExpertTechnologies currentService={currentService} />}/>
+          <Route path="contactus" element={<ContactUs />}/>
         <Route path="careers" element={<Careers/>}/>
         </Route>
         

@@ -1,13 +1,13 @@
-import angular from '../assets/languages/angular.jpg'
+import angular from '../assets/languages/angular.svg'
 import typescript from '../assets/languages/typescript.svg'
-import iosandroid from '../assets/languages/iosandroid.jpg'
+import android from '../assets/languages/android.svg'
 import next from '../assets/languages/next.svg'
-import jquery from '../assets/languages/jquery.jpg'
+import jquery from '../assets/languages/jquery.svg'
 import js from '../assets/languages/js.svg'
-import nodejs from '../assets/languages/nodejs.jpg'
+import nodejs from '../assets/languages/node.svg'
 import html from '../assets/languages/html.svg'
 import vuejs from '../assets/languages/vuejs.svg'
-import react from '../assets/languages/react.jpg'
+import react from '../assets/languages/react.svg'
 
 import Consulting from '../assets/SERVICES/Consulting.png'
 import DigitalMarketing from '../assets/SERVICES/DigitalMarketing.png'
@@ -48,7 +48,7 @@ export const images = [
     { id: 7, src: typescript, alt: "Typescript" },
     { id: 8, src: jquery, alt: "jQuery Libraries" },
     { id: 9, src: html, alt: "HTML" },
-    { id: 10, src: iosandroid, alt: "iOS & Android Apps" },
+    { id: 10, src: android, alt: "iOS & Android Apps" },
 ];
 
 export const solutions = [

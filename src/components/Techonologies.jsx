@@ -38,13 +38,13 @@ const Technologies = () => {
         {images.map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center justify-center p-2 max-w-[60%] bg-gray-100 rounded-md shadow hover:shadow-lg mt-2 transition"
+            className="flex flex-col items-center justify-center p-2  bg-gray-100 rounded-md shadow hover:shadow-lg mt-4 transition"
             variants={cardVariants}
             initial="hidden"
             animate="visible"
             custom={index}
           >
-            <img src={item.src} alt={item.alt} />
+            <img src={item.src} alt={item.alt} height={100 } width={100} />
           </motion.div>
         ))}
       </div>

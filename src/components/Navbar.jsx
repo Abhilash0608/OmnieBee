@@ -18,12 +18,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
     // Function to handle mouse enter and leave
     const handleMouseEnter = () => setHover(true);
     const handleMouseLeave = () => setHover(false);
-    const scrollToContact = () => {
-        const contactSection = document.getElementById("contact"); // Replace with your section's ID
-        contactSection?.scrollIntoView({ behavior: "smooth" });
 
-    };
-    console.log(expertHover,">>")
     return (
         <nav
             className={`${isScrolled
@@ -50,6 +45,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         className="group relative"
                         onMouseEnter={() => { handleMouseEnter() }}
                         onMouseLeave={handleMouseLeave}
+                        tabIndex={0}
                     >
                         <span className="hover:text-blue-500 flex items-center" >
                             Services <IoMdArrowDropdown className="mt-1" />
@@ -103,8 +99,9 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     <li
                         className="group relative"
                         onMouseEnter={() => { setExpertHover(true) }}
-                        onMouseLeave={()=>setExpertHover(false)}
-                         // Ensure "Services" dropdown closes
+                        onMouseLeave={() => setExpertHover(false)}
+                        tabIndex={0}
+                    // Ensure "Services" dropdown closes
                     >
                         <span className="hover:text-blue-500 flex items-center">
                             Expertise <IoMdArrowDropdown className="mt-1 cursor-pointer" />
@@ -149,9 +146,9 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         </Link>
                     </li>
                     <li>
-                        <span onClick={() => scrollToContact()} className="hover:text-blue-500 cursor-pointer">
+                        <Link to='/contactus' className="hover:text-blue-500 cursor-pointer">
                             Contact Us
-                        </span>
+                        </Link>
                     </li>
                 </ul>
 
@@ -259,12 +256,12 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             </Link>
                         </li>
                         <li className="text-center">
-                            <span onClick={() => {
-                                scrollToContact(); // Function to scroll to the contact section
-                                setMenuOpen(false); // Closes the mobile menu
-                            }} className="block hover:text-blue-500">
+                            <Link to='contactus' className="hover:text-blue-500 cursor-pointer" onClick={() => {
+                                setMenuOpen(false)
+
+                            }}>
                                 Contact Us
-                            </span>
+                            </Link>
                         </li>
                     </ul>
                 </motion.div>

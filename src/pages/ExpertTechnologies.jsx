@@ -33,7 +33,7 @@ const ExpertTechnologies = ({ currentService }) => {
 
                 {/* Description with Icons */}
                 <motion.div
-                    className="flex gelx-col gap-4"
+                    className="flex flex-col gap-4"
                     initial="hidden"
                     animate="visible"
                     key={currentService} // Re-trigger animation on state update
@@ -41,7 +41,7 @@ const ExpertTechnologies = ({ currentService }) => {
                     {technologyToRender.descriptions.map((desc, index) => (
                         <motion.div
                             key={index}
-                            className="flex items-center justify-center space-x-2"
+                            className="flex items-start space-x-2"
                             variants={lineVariant}
                             custom={index}
                         >
