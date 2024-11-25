@@ -54,8 +54,8 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         {hover && (
                             <div>
                                 <motion.div
-                                    style={{ width: "500px" }}
-                                    className="grid grid-cols-2 absolute rounded-lg top-6 -left-10 bg-white shadow-md space-y-2"
+                                    style={{ width: "400px" }}
+                                    className="grid grid-cols-2 absolute rounded-lg top-6 -left-16 bg-white shadow-md space-y-2"
                                     onMouseEnter={() => {
                                         handleMouseEnter();
                                         setExpertHover(false);
