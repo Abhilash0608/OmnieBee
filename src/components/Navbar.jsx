@@ -97,7 +97,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                         ))}
                                     </div>
 
-                                    <div className="col-span-1 flex flex-col gap-4 justify-start bg-zinc-300 p-2 items-start">
+                                    <div className="col-span-1 flex flex-col gap-4 justify-start  p-2 items-start">
                                         <h2 className="font-bold text-blue-500">{hoveredService.titleOne}</h2>
                                         <p className="text-left text-sm text-gray-600">{hoveredService.description}</p>
                                         {/* <span className="text-blue-500">Read more ...</span> */}

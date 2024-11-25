@@ -34,7 +34,7 @@ function Hero({scrollToContact,setCurrentService}) {
     >
       <Navbar isScrolled={isScrolled}  scrollToContact={scrollToContact} setCurrentService={setCurrentService}/>
       <div className="p-4 flex justify-center w-full rounded-md text-center" style={{maxWidth:'1140px'}}>
-        <div className="w-full md:w-[60%] lg:w-[40%]">
+        <div className="w-full md:w-[60%] lg:w-[70%]">
           <span className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-normal italic mt-4 font-bold">
             {titles[currentIndex].title}
           </span>

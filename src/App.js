@@ -7,6 +7,8 @@ import ServicesCards from './components/ServicesCards';
 import Careers from './pages/Careers';
 import Services from './pages/Services';
 import ExpertTechnologies from './pages/ExpertTechnologies';
+import './index.css'; // Ensure correct path
+
 const Home = () => (
   <div>
     <ServicesCards/>
