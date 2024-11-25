@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import logo12 from "../assets/logo12.png";
-import { expertiseDetails, services, ServicesDetails } from "../utils/common";
-import { Link } from "react-router-dom";
+import { expertiseDetails, ServicesDetails } from "../utils/common";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+
 const Navbar = ({ isScrolled, setCurrentService }) => {
+    const location = useLocation();
+    const isActive = (path) => location.pathname.includes(path);
     const [menuOpen, setMenuOpen] = useState(false);
     const [hover, setHover] = useState(false);
     const [expertHover, setExpertHover] = useState(false);
 
-    const [hoveredService, setHoveredService] = useState(services[0]);
+    const [hoveredService, setHoveredService] = useState(ServicesDetails[0]);
     const [servicesAccordionOpen, setServicesAccordionOpen] = useState(false);
     const [expertiseAccordionOpen, setExpertiseAccordionOpen] = useState(false);
 
-    // Refs for the dropdown and li
-
-    // Function to handle mouse enter and leave
     const handleMouseEnter = () => setHover(true);
     const handleMouseLeave = () => setHover(false);
 
@@ -27,132 +28,130 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                 } fixed top-0 left-0 w-full z-10 transition-all duration-300`}
         >
             <div className="container mx-auto flex items-center justify-between p-4">
-                {/* Logo */}
                 <div className="text-lg font-bold">
-                    <Link to="/">
+                    <NavLink to="/">
                         <img src={logo12} alt="logo" height={120} width={120} />
-                    </Link>
+                    </NavLink>
                 </div>
 
-                {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6 relative">
                     <li>
-                        <Link to="/" className="hover:text-blue-500 cursor-pointer">
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                        >
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li
                         className="group relative"
-                        onMouseEnter={() => { handleMouseEnter() }}
+                        onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        tabIndex={0}
                     >
-                        <span className="hover:text-blue-500 flex items-center" >
+                        <NavLink to='/services'  className={({ isActive }) =>
+                                isActive
+                                    ? " flex items-center cursor-pointer text-blue-500"
+                                    : "hover:text-blue-500 flex items-center cursor-pointer"
+                            }>
                             Services <IoMdArrowDropdown className="mt-1" />
-                        </span>
-                        {/* Dropdown Menu */}
+                        </NavLink>
                         {hover && (
-                            <div>
-                                <motion.div
-                                    style={{ width: "400px" }}
-                                    className="grid grid-cols-2 absolute rounded-lg top-6 -left-16 bg-white shadow-md space-y-2"
-                                    onMouseEnter={() => {
-                                        handleMouseEnter();
-                                        setExpertHover(false);
-                                    }}
-                                    initial={{ opacity: 0, y: -20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                                >
-                                    <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 text-white py-2">
-                                        {ServicesDetails.map((service) => (
-                                            <div
-                                                key={service.id}
-                                                className="flex py-2 m-auto"
-                                                onClick={() => {
-                                                    setCurrentService(service.id);
-                                                    setHover(false);
-                                                }}
-                                                onMouseEnter={() => {
-                                                    setHoveredService(service);
-                                                }}
+                            <motion.div
+                                style={{ width: "400px" }}
+                                className="grid grid-cols-2 absolute rounded-lg top-6 -left-16 bg-white shadow-md space-y-2"
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.4, ease: "easeInOut" }}
+                            >
+                                <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 text-white py-2">
+                                    {ServicesDetails.map((service) => (
+                                        <div
+                                            key={service.id}
+                                            className="flex py-2 m-auto"
+                                            onMouseEnter={() => setHoveredService(service)}
+                                            onClick={() => setHover(false)}
+                                        >
+                                            <NavLink
+                                                to="/services"
+                                                className="hover:text-blue-500 cursor-pointer"
                                             >
-                                                <div className="flex">
-                                                    <Link to={`services`} className="hover:text-blue-500 cursor-pointer">
-                                                        {service.titleOne}
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <div className="col-span-1 flex flex-col gap-4 justify-start p-4 items-start">
-                                        <h2 className="font-bold text-blue-500">{hoveredService.titleOne}</h2>
-                                        <p className="text-left text-sm text-gray-600">{hoveredService.description}</p>
-                                        {/* <span className="text-blue-500">Read more ...</span> */}
-                                    </div>
-                                </motion.div>
-                            </div>
+                                                {service.titleOne}
+                                            </NavLink>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="col-span-1 flex flex-col gap-4 justify-start p-4 items-start">
+                                    <h2 className="font-bold text-blue-500">{hoveredService.titleOne}</h2>
+                                    <p className="text-left text-sm text-gray-600">{hoveredService.description}</p>
+                                </div>
+                            </motion.div>
                         )}
                     </li>
                     <li
                         className="group relative"
-                        onMouseEnter={() => { setExpertHover(true) }}
+                        onMouseEnter={() => setExpertHover(true)}
                         onMouseLeave={() => setExpertHover(false)}
-                        tabIndex={0}
-                    // Ensure "Services" dropdown closes
                     >
-                        <span className="hover:text-blue-500 flex items-center">
-                            Expertise <IoMdArrowDropdown className="mt-1 cursor-pointer" />
-                        </span>
+                        <NavLink
+                            to='/expertise'
+                            className={({ isActive }) =>
+                                isActive
+                                    ? " flex items-center cursor-pointer text-blue-500"
+                                    : "hover:text-blue-500 flex items-center cursor-pointer"
+                            }
+                        >
+                            Expertise <IoMdArrowDropdown className="mt-1" />
+                        </NavLink>
+
                         {expertHover && (
                             <motion.div
-                                className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72 "
+                                className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72"
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
                             >
-                                <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 py-2 text-white">
+                                <div className="flex flex-col gap-1 col-span-1 rounded-lg bg-gray-900 text-white py-2">
                                     {expertiseDetails.map((expert) => (
                                         <motion.div
                                             key={expert.id}
                                             className="flex py-2 m-auto"
-                                            onClick={() => {
-                                                setCurrentService(expert.id);
-                                                setExpertHover(false);
-                                            }}
+                                            onClick={() => setExpertHover(false)}
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ delay: 0.1 * expert.id, duration: 0.2 }}
                                         >
-                                            <div className="flex">
-                                                <Link to={`expertise`} className="hover:text-blue-500 cursor-pointer">
-                                                    {expert.title}
-                                                </Link>
-                                            </div>
+                                            <NavLink
+                                                to="/expertise"
+                                                className="hover:text-blue-500 cursor-pointer"
+                                            >
+                                                {expert.title}
+                                            </NavLink>
                                         </motion.div>
                                     ))}
                                 </div>
                             </motion.div>
                         )}
                     </li>
-
-
                     <li>
-                        <Link to="/careers" className="hover:text-blue-500 cursor-pointer">
+                        <NavLink
+                            to="/careers"
+                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                        >
                             Careers
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to='/contactus' className="hover:text-blue-500 cursor-pointer">
+                        <NavLink
+                            to="/contactus"
+                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                        >
                             Contact Us
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
 
-                {/* Mobile Menu Button */}
                 <button
                     className={`block md:hidden text-3xl transition-all duration-300 ${isScrolled ? "text-black" : "text-white"}`}
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -161,7 +160,6 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
             {menuOpen && (
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -172,16 +170,24 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                 >
                     <ul className="space-y-4">
                         <li className="text-center">
-                            <Link to="/" className="block " onClick={() => setMenuOpen(false)}>
+                            <NavLink to="/" 
+                            // className="block "
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "  text-blue-900 block"
+                                    : " block"
+                            }
+                             onClick={() => 
+                             setMenuOpen(false)}>
                                 Home
-                            </Link>
+                            </NavLink>
                         </li>
 
                         {/* Services Accordion */}
                         <li className="flex flex-col items-center">
                             <button
                                 onClick={() => setServicesAccordionOpen(!servicesAccordionOpen)}
-                                className="flex items-center justify-center w-full "
+                                className={`flex items-center justify-center w-full ${isActive('/services') ? 'text-blue-900' : ''}`}
                             >
                                 Services <IoMdArrowDropdown />
                             </button>
@@ -195,7 +201,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 >
                                     {ServicesDetails.map((service) => (
                                         <li key={service.id}>
-                                            <Link
+                                            <NavLink
                                                 to="services"
                                                 onClick={() => {
                                                     setCurrentService(service.id);
@@ -205,7 +211,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                                 className="block "
                                             >
                                                 {service.titleOne}
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     ))}
                                 </motion.ul>
@@ -216,7 +222,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         <li className="flex flex-col items-center">
                             <button
                                 onClick={() => setExpertiseAccordionOpen(!expertiseAccordionOpen)}
-                                className="flex items-center justify-center w-full "
+                                className={`flex items-center justify-center w-full ${isActive('/expertise') ? 'text-blue-900' : ''}`}
                             >
                                 Expertise <IoMdArrowDropdown />
                             </button>
@@ -230,7 +236,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 >
                                     {expertiseDetails.map((expert) => (
                                         <li key={expert.id}>
-                                            <Link
+                                            <NavLink
                                                 to="expertise"
                                                 onClick={() => {
                                                     setCurrentService(expert.id);
@@ -240,7 +246,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                                 className="block text-blue-500"
                                             >
                                                 {expert.title}
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     ))}
                                 </motion.ul>
@@ -248,24 +254,37 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         </li>
 
                         <li className="text-center">
-                            <Link to="/careers" className="block hover:text-blue-500" onClick={() => {
+                            <NavLink to="/careers" 
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "  text-blue-900 cursor-pointer"
+                                    : " cursor-pointer"
+                            }
+                            onClick={() => {
                                 setMenuOpen(false)
 
                             }}>
                                 Careers
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="text-center">
-                            <Link to='contactus' className="hover:text-blue-500 cursor-pointer" onClick={() => {
+                            <NavLink to='contactus' 
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "  text-blue-900 cursor-pointer"
+                                    : " cursor-pointer"
+                            }
+                             onClick={() => {
                                 setMenuOpen(false)
 
                             }}>
                                 Contact Us
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </motion.div>
             )}
+
         </nav>
     );
 };

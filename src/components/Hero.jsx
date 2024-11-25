@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import heroOmni from "../assets/heroOmni.jpg";
+import hero_bg1 from "../assets/hero_bg1.jpg";
 import Navbar from "./Navbar";
 import { titles } from "../utils/common";
 
@@ -29,7 +29,7 @@ function Hero({setCurrentService}) {
     <div
       className="relative w-full h-96 bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${heroOmni})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${hero_bg1})`,
       }}
     >
       <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />
