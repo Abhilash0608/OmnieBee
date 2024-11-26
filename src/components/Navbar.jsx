@@ -30,7 +30,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
             <div className="container mx-auto flex items-center justify-between p-4">
                 <div className="text-lg font-bold">
                     <NavLink to="/">
-                        <img src={logo12} alt="logo" height={120} width={120} />
+                        <img src={logo12} alt="Omnibee gloabl solutions" height={120} width={120} />
                     </NavLink>
                 </div>
 
