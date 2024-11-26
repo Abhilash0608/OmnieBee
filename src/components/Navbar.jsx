@@ -48,13 +48,12 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <NavLink to='/services'  className={({ isActive }) =>
-                                isActive
-                                    ? " flex items-center cursor-pointer text-blue-500"
-                                    : "hover:text-blue-500 flex items-center cursor-pointer"
-                            }>
+                        <span  
+                         className={ `${isActive('/services') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
+                       
+                            >
                             Services <IoMdArrowDropdown className="mt-1" />
-                        </NavLink>
+                        </span>
                         {hover && (
                             <motion.div
                                 style={{ width: "400px" }}
@@ -75,6 +74,9 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                             <NavLink
                                                 to="/services"
                                                 className="hover:text-blue-500 cursor-pointer"
+                                                onClick={()=>{
+                                                    setCurrentService(service.id);
+                                                }}
                                             >
                                                 {service.titleOne}
                                             </NavLink>
@@ -93,16 +95,12 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         onMouseEnter={() => setExpertHover(true)}
                         onMouseLeave={() => setExpertHover(false)}
                     >
-                        <NavLink
-                            to='/expertise'
-                            className={({ isActive }) =>
-                                isActive
-                                    ? " flex items-center cursor-pointer text-blue-500"
-                                    : "hover:text-blue-500 flex items-center cursor-pointer"
-                            }
+                        <span
+                            className={ `${isActive('/expertise') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
+                           
                         >
                             Expertise <IoMdArrowDropdown className="mt-1" />
-                        </NavLink>
+                        </span>
 
                         {expertHover && (
                             <motion.div
@@ -125,6 +123,9 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                             <NavLink
                                                 to="/expertise"
                                                 className="hover:text-blue-500 cursor-pointer"
+                                                onClick={()=>{
+                                                    setCurrentService(expert.id);
+                                                }}
                                             >
                                                 {expert.title}
                                             </NavLink>

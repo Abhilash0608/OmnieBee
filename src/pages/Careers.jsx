@@ -94,8 +94,8 @@ const Careers = () => {
                 custom={7}
             >
                 Note: Send your updated resume to{' '}
-                <a href="mailto:omniebeeglobalsolutions@gmail.com" className="text-blue-500">
-                    omniebeeglobalsolutions@gmail.com
+                <a href="mailto:info@omniebeeglobalsolutions.com" className="text-blue-500">
+                    info@omniebeeglobalsolutions.com
                 </a>
             </motion.p>
         </div>

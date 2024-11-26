@@ -97,8 +97,8 @@ const ContactUs = () => {
             <div className="flex flex-col items-center">
               <h3 className="font-bold">Email</h3>
               <p className="text-gray-700 text-center ">
-                <a href="mailto:omniebeeglobalsolutions@gmail.com" className="text-blue-500">
-                  omniebeeglobalsolutions@gmail.com
+                <a href="mailto:info@omniebeeglobalsolutions.com" className="text-blue-500">
+                  info@omniebeeglobalsolutions.com
                 </a>
               </p>
             </div>

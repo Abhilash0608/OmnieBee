@@ -31,7 +31,7 @@ import travel from '../assets/solutions/travel.png'
 
 
   export const titles = [
-    { id: 1, title: "Create, Innovate, and Customize a standout website tailored for your brand." },
+    { id: 1, title: "At Omniebee Global Solutions we Create, Innovate, and Customize a standout website tailored for your brand." },
     { id: 2, title: "Premium technical solutions crafted to elevate your business." },
     { id: 3, title: "Expert consultancy to strengthen customer loyalty and enhance user experience." },
     { id: 4, title: "A 5% improvement in retention can boost profitability by up to 25%." },
@@ -76,7 +76,7 @@ export const services = [
 export const ServicesDetails = [
     {
         id: 0,
-        titleTwo: "Why Opt for Our Web Design Services",
+        titleTwo: "Why Opt for Our Web Design Services at Omniebee Global Solutions",
         titleOne: "WEB DESIGN",
         description: "We create modern, user-friendly, and optimized websites that drive results and are easy to maintain.",
         descriptionTwo: [
@@ -192,10 +192,10 @@ export const expertiseDetails = [
       id: 0,
       title: "MEAN Stack",
       descriptions: [
-        "Our Mean Stack developers are skilled in different platforms.",
-        "Our wide experience with MEAN Stack development services lets us quickly craft tailored solutions for large and mid-level enterprises.",
-        "We can build high-performing, accessible, and secure web and mobile applications with our expertise as a MEAN Stack development company.",
-        "Our extensive experience with MEAN Stack development services helps us build intuitive and effective content management systems for your business.",
+        "Omniebee Global Solutions Mean Stack developers are skilled in different platforms.",
+        "Omniebee Global Solutions developers wide experience with MEAN Stack development services lets us quickly craft tailored solutions for large and mid-level enterprises.",
+        " Omniebee Global Solutions can build high-performing, accessible, and secure web and mobile applications with our expertise as a MEAN Stack development company.",
+        "Omniebee Global Solutions extensive experience with MEAN Stack development services helps us build intuitive and effective content management systems for your business.",
         "We have years of domain expertise in business platforms and applications using MEAN Stack-based frameworks while retaining its full feature set."
       ]
     },

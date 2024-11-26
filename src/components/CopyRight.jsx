@@ -7,7 +7,7 @@ const Copyright = () => {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 {/* Copyright Text */}
                 <p className="text-center md:text-left">
-                    Copyrights © 2024 All Rights Reserved by Omnie Bee IT Solutions
+                    Copyrights © 2024 All Rights Reserved by Omniebee Global Solutions Private Limited
                 </p>
 
                 {/* Social Media Icons */}
