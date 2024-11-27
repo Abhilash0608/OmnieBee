@@ -8,18 +8,19 @@ import Careers from './pages/Careers';
 import Services from './pages/Services';
 import ExpertTechnologies from './pages/ExpertTechnologies';
 import './index.css'; // Ensure correct path
-import ScrollToTop from './components/ScrollToTop';
 import ContactUs from './pages/ContactUs';
 
-const Home = () => (
+const Home = () => {
+  
+return (
   <div>
-    <ScrollToTop/>
     <ServicesCards/>
     <Technologies />
     
     <Solutions />
   </div>
 );
+}
 
 const App = () => {
   const [currentService,setCurrentService]=useState(0)
