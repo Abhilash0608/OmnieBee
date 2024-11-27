@@ -1,17 +1,23 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Contact from '../components/Contact';
+import data from '../app.json'; // Import the JSON data
 
 const Careers = () => {
+    const {
+        pageTitle,
+        metaDescription,
+        header: { title, subtitle },
+        jobDetails: { title: jobTitle, description, minimumQualifications, note },
+    } = data.careers;
+
     useEffect(() => {
-        window.scrollTo(0, 0); // Scrolls to the top of the page
-        document.title = 'Careers - Omnie Bee Global Solutions'; // Update page title
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        document.title = pageTitle; // Update page title
         document
             .querySelector('meta[name="description"]')
-            ?.setAttribute(
-                'content',
-                'Explore career opportunities at Omnie Bee Global Solutions. Join our team and work on cutting-edge projects as a React Developer Intern.'
-            );
-    }, []);
+            ?.setAttribute('content', metaDescription); // Update meta description
+    }, [pageTitle, metaDescription]);
 
     const lineVariant = {
         hidden: { opacity: 0, y: 10 },
@@ -43,14 +49,14 @@ const Careers = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: 'easeInOut' }}
                     >
-                        CAREERS
+                        {title}
                     </motion.h1>
                     <motion.h4
                         className="text-xl font-semibold mb-4"
                         variants={lineVariant}
                         custom={1}
                     >
-                        Great Work Starts With Great People
+                        {subtitle}
                     </motion.h4>
                 </motion.div>
             </header>
@@ -62,7 +68,7 @@ const Careers = () => {
                     variants={lineVariant}
                     custom={2}
                 >
-                    React Developer – Intern
+                    {jobTitle}
                 </motion.h2>
 
                 {/* Job Description */}
@@ -71,12 +77,7 @@ const Careers = () => {
                     variants={lineVariant}
                     custom={3}
                 >
-                    "We are looking for a motivated React Developer Intern who has a good
-                    understanding of React.js and its core principles. The intern will assist
-                    in building and maintaining user interfaces, working with APIs, and
-                    collaborating with senior developers to deliver high-quality code. Strong
-                    communication skills, a passion for learning, and the ability to work both
-                    independently and in a team are essential for this role."
+                    {description}
                 </motion.p>
 
                 {/* Qualifications */}
@@ -92,10 +93,7 @@ const Careers = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {[
-                        'BCA / B.E./ B.Tech / MCA / M.Tech or Equivalent',
-                        'Excellent written and verbal communication skills',
-                    ].map((item, index) => (
+                    {minimumQualifications.map((item, index) => (
                         <motion.li key={index} variants={lineVariant} custom={5 + index}>
                             {item}
                         </motion.li>
@@ -108,15 +106,10 @@ const Careers = () => {
                     variants={lineVariant}
                     custom={7}
                 >
-                    Note: Send your updated resume to{' '}
-                    <a
-                        href="mailto:info@omniebeeglobalsolutions.com"
-                        className="text-blue-500"
-                    >
-                        info@omniebeeglobalsolutions.com
-                    </a>
+                    Note: {note}
                 </motion.p>
             </article>
+            <Contact />
         </main>
     );
 };

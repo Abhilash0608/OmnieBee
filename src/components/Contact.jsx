@@ -1,7 +1,25 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import contactData from "../app.json"; // Import the contact JSON
+import { useEffect } from "react";
 
-const ContactUs = () => {
+const Contact = () => {
+  const {
+    pageTitle,
+    metaDescription,
+    form: { title: formTitle, description, fields, buttonText },
+    contactDetails: { address, phone, email },
+  } = contactData.contact;
+
+  // Update metadata on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top of the page
+    document.title = pageTitle; // Update page title
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", metaDescription); // Update meta description
+  }, [pageTitle, metaDescription]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8, ease: "easeInOut" } },
@@ -30,33 +48,31 @@ const ContactUs = () => {
         variants={itemVariants}
         custom={0}
       >
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">SEND US A MESSAGE</h2>
-        <p className="mb-6 text-gray-700">
-          Please send us your details by filling out the form below, and we will quickly get back to you.
-        </p>
+        <h2 className="text-2xl font-bold mb-4 text-blue-600">{formTitle}</h2>
+        <p className="mb-6 text-gray-700">{description}</p>
         <form className="space-y-4">
           <input
             type="text"
-            placeholder="Name"
+            placeholder={fields.namePlaceholder}
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder={fields.emailPlaceholder}
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
           <input
             type="tel"
-            placeholder="Phone Number"
+            placeholder={fields.phonePlaceholder}
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
           <input
             type="text"
-            placeholder="Subject"
+            placeholder={fields.subjectPlaceholder}
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
           <textarea
-            placeholder="Message"
+            placeholder={fields.messagePlaceholder}
             rows="5"
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           ></textarea>
@@ -64,7 +80,7 @@ const ContactUs = () => {
             type="submit"
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
           >
-            Submit
+            {buttonText}
           </button>
         </form>
       </motion.div>
@@ -76,29 +92,45 @@ const ContactUs = () => {
         custom={1}
       >
         <div className="flex flex-col gap-8 w-full px-4">
+          {/* Address Section */}
           <div className="flex flex-col items-center justify-center gap-4 w-full">
-            <FaMapMarkerAlt className="text-blue-600 text-4xl" />
-            <div className=" flex flex-col items-center">
-              <h3 className="font-bold">Address</h3>
-              <p className="text-gray-700 text-center ">
-                8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045
-              </p>
+            <a
+              href={address.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <FaMapMarkerAlt className="text-blue-600 text-4xl" />
+            </a>
+            <div className="flex flex-col items-center">
+              <h3 className="font-bold">{address.title}</h3>
+              <p className="text-gray-700 text-center">{address.description}</p>
             </div>
           </div>
+
+          {/* Phone Section */}
           <div className="flex flex-col items-center justify-center gap-4 w-full">
-            <FaPhoneAlt className="text-blue-600 text-4xl " />
+            <a href={phone.phoneLink} className="text-gray-700 text-center">
+              <FaPhoneAlt className="text-blue-600 text-4xl" />
+            </a>
             <div className="flex flex-col items-center">
-              <h3 className="font-bold">Phone</h3>
-              <p className="text-gray-700 text-center ">+91 9505637481</p>
+              <h3 className="font-bold">{phone.title}</h3>
+              <a href={phone.phoneLink} className="text-blue-600 text-center">
+                {phone.number}
+              </a>
             </div>
           </div>
-          <div className="flex flex-col  items-center justify-center gap-4 w-full">
-            <FaEnvelope className="text-blue-600 text-4xl " />
+
+          {/* Email Section */}
+          <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <a href={email.emailLink}>
+              <FaEnvelope className="text-blue-600 text-4xl" />
+            </a>
             <div className="flex flex-col items-center">
-              <h3 className="font-bold">Email</h3>
-              <p className="text-gray-700 text-center ">
-                <a href="mailto:info@omniebeeglobalsolutions.com" className="text-blue-500">
-                  info@omniebeeglobalsolutions.com
+              <h3 className="font-bold">{email.title}</h3>
+              <p className="text-gray-700 text-center">
+                <a href={email.emailLink} className="text-blue-500">
+                  {email.address}
                 </a>
               </p>
             </div>
@@ -109,4 +141,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

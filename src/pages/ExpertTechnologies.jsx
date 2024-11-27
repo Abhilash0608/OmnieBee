@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { motion } from "framer-motion";
 import { expertiseDetails } from "../utils/common";
+import Contact from "../components/Contact";
 
 const ExpertTechnologies = ({ currentService }) => {
     const technologyToRender = expertiseDetails[currentService];
@@ -25,9 +26,9 @@ const ExpertTechnologies = ({ currentService }) => {
 
     return (
         <div className="p-4 max-w-4xl mx-auto my-12" style={{ maxWidth: '1140px' }}>
-            <div className="mt-8">
+            <div className="my-8 px-8">
                 {/* Title */}
-                <h2 className="text-blue-500 text-lg font-semibold mb-4">
+                <h2 className="text-blue-500 text-2xl font-semibold mb-4">
                     {technologyToRender.title}
                 </h2>
 
@@ -45,12 +46,14 @@ const ExpertTechnologies = ({ currentService }) => {
                             variants={lineVariant}
                             custom={index}
                         >
-                            <IoIosCheckmarkCircle className="text-blue-500 mt-1 md:text-2xl text-xl" />
+                            <IoIosCheckmarkCircle className="text-blue-500 mt-1  md:text-2xl text-xl" />
                             <p className="text-gray-700">{desc}</p>
                         </motion.div>
                     ))}
                 </motion.div>
             </div>
+            <Contact/>
+
         </div>
     );
 };

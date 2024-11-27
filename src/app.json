@@ -1,0 +1,152 @@
+{
+    "careers":{
+        "pageTitle": "Careers - Omnie Bee Global Solutions",
+    "metaDescription": "Explore career opportunities at Omnie Bee Global Solutions. Join our team and work on cutting-edge projects as a React Developer Intern.",
+    "header": {
+      "title": "CAREERS",
+      "subtitle": "Great Work Starts With Great People"
+    },
+    "jobDetails": {
+      "title": "React Developer – Intern",
+      "description": "We are looking for a motivated React Developer Intern who has a good understanding of React.js and its core principles. The intern will assist in building and maintaining user interfaces, working with APIs, and collaborating with senior developers to deliver high-quality code. Strong communication skills, a passion for learning, and the ability to work both independently and in a team are essential for this role.",
+      "minimumQualifications": [
+        "BCA / B.E./ B.Tech / MCA / M.Tech or Equivalent",
+        "Excellent written and verbal communication skills"
+      ],
+      "note": "Send your updated resume to info@omniebeeglobalsolutions.com"
+    }
+    },
+    
+        "contact": {
+          "pageTitle": "Contact Us - Omnie Bee Global Solutions",
+          "metaDescription": "Reach out to Omnie Bee Global Solutions for inquiries or collaboration opportunities. Contact us via phone, email, or visit us at our Hyderabad office.",
+          "header": {
+            "title": "Contact Us",
+            "subtitle": "We're here to help! Get in touch with us."
+          },
+          "form": {
+            "title": "SEND US A MESSAGE",
+            "description": "Please send us your details by filling out the form below, and we will quickly get back to you.",
+            "fields": {
+              "namePlaceholder": "Name",
+              "emailPlaceholder": "Email",
+              "phonePlaceholder": "Phone Number",
+              "subjectPlaceholder": "Subject",
+              "messagePlaceholder": "Message"
+            },
+            "buttonText": "Submit"
+          },
+          "contactDetails": {
+            "address": {
+              "icon": "FaMapMarkerAlt",
+              "title": "Address",
+              "description": "8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045",
+              "mapLink": "https://www.google.com/maps/place/Omniebee+Global+Solutions+Pvt.Ltd/@0,0,3a,59.8y/data=!3m8!1e2!3m6!1sAF1QipPOcOuUs6R-tmQgjhESmiV4Azv0_LXj2sTDEta0!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPOcOuUs6R-tmQgjhESmiV4Azv0_LXj2sTDEta0%3Dw203-h152-k-no!7i1600!8i1200!4m7!3m6!1s0x3bcb9117b2bca973:0xc489b8669c1ad38b!8m2!3d17.4315517!4d78.426384!10e5!16s%2Fg%2F11wr9dx2mc?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
+            },
+            "phone": {
+              "icon": "FaPhoneAlt",
+              "title": "Phone",
+              "number": "+91 9505637481",
+              "phoneLink": "tel:+919505637481"
+            },
+            "email": {
+              "icon": "FaEnvelope",
+              "title": "Email",
+              "address": "info@omniebeeglobalsolutions.com",
+              "emailLink": "mailto:info@omniebeeglobalsolutions.com"
+            }
+          }
+        },
+        
+            "copyright": {
+              "text": "Copyrights © 2024 All Rights Reserved by Omniebee Global Solutions Private Limited",
+              "socialMediaLinks": [
+                {
+                  "platform": "Facebook",
+                  "url": "https://www.facebook.com/profile.php?id=61565397555246",
+                  "icon": "FaFacebook",
+                  "color": "text-blue-500",
+                  "hoverColor": "hover:text-blue-400"
+                },
+                {
+                  "platform": "Instagram",
+                  "url": "https://www.instagram.com/omniebee_global_solutions",
+                  "icon": "FaInstagram",
+                  "color": "text-pink-500",
+                  "hoverColor": "hover:text-pink-400"
+                },
+                {
+                  "platform": "LinkedIn",
+                  "url": "https://www.linkedin.com/in/vinay-surya-a98864266/",
+                  "icon": "FaLinkedin",
+                  "color": "text-blue-400",
+                  "hoverColor": "hover:text-blue-300"
+                }
+              ]
+            },
+            "navbarData":
+                {
+                    "logo": {
+                      "src": "../assets/logo12.png",
+                      "alt": "Omniebee Global Solutions"
+                    },
+                    "links": [
+                      {
+                        "name": "Home",
+                        "path": "/",
+                        "activeClass": "text-blue-500"
+                      },
+                      {
+                        "name": "Services",
+                        "path": "/services",
+                        "activeClass": "text-blue-500",
+                        "subMenu": [
+                          {
+                            "name": "Service 1",
+                            "path": "/services/service1",
+                            "description": "Description for Service 1"
+                          },
+                          {
+                            "name": "Service 2",
+                            "path": "/services/service2",
+                            "description": "Description for Service 2"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Expertise",
+                        "path": "/expertise",
+                        "activeClass": "text-blue-500",
+                        "subMenu": [
+                          {
+                            "name": "Expertise 1",
+                            "path": "/expertise/expertise1",
+                            "description": "Description for Expertise 1"
+                          },
+                          {
+                            "name": "Expertise 2",
+                            "path": "/expertise/expertise2",
+                            "description": "Description for Expertise 2"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Careers",
+                        "path": "/careers",
+                        "activeClass": "text-blue-500"
+                      },
+                      {
+                        "name": "Contact Us",
+                        "path": "/contactus",
+                        "activeClass": "text-blue-500"
+                      }
+                    ]
+                  }
+                  
+            
+          
+          
+      
+      
+  }
+  

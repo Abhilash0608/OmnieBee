@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { motion } from "framer-motion";
 import { ServicesDetails } from "../utils/common";
+import Contact from "../components/Contact";
 
 
 
@@ -37,7 +38,7 @@ const Services = ({ currentService }) => {
     return (
         <motion.div
             key={currentService} // Ensures reanimation on state update
-            className="p-4 max-w-4xl mx-auto my-12"
+            className=" max-w-[1140px] mx-auto my-12 px-8"
             initial="hidden"
             animate="visible"
         >
@@ -89,6 +90,8 @@ const Services = ({ currentService }) => {
                     </motion.div>
                 ))}
             </motion.div>
+    <Contact/>
+
         </motion.div>
     );
 };

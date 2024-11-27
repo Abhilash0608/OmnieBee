@@ -29,7 +29,7 @@ function Hero({setCurrentService}) {
     <div
       className="relative w-full h-96 bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(${hero_bg1})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero_bg1})`,
       }}
     >
       <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
-import logo12 from "../assets/logo12.png";
 import { expertiseDetails, ServicesDetails } from "../utils/common";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import navbarData from "../app.json"; 
 
 const Navbar = ({ isScrolled, setCurrentService }) => {
     const location = useLocation();
@@ -19,6 +19,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
 
     const handleMouseEnter = () => setHover(true);
     const handleMouseLeave = () => setHover(false);
+    const { logo, links } = navbarData;
 
     return (
         <nav
@@ -30,17 +31,17 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
             <div className="container mx-auto flex items-center justify-between p-4">
                 <div className="text-lg font-bold">
                     <NavLink to="/">
-                        <img src={logo12} alt="Omnibee gloabl solutions" height={120} width={120} />
+                    <img src={logo.src} alt={logo.alt} height={120} width={120} />
                     </NavLink>
                 </div>
 
                 <ul className="hidden md:flex space-x-6 relative">
                     <li>
                         <NavLink
-                            to="/"
+                            to={links[0].path}
                             className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
                         >
-                            Home
+                             {links[0].name}
                         </NavLink>
                     </li>
                     <li
@@ -52,7 +53,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                          className={ `${isActive('/services') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
                        
                             >
-                            Services <IoMdArrowDropdown className="mt-1" />
+                            {links[1].name} <IoMdArrowDropdown className="mt-1" />
                         </span>
                         {hover && (
                             <motion.div
@@ -99,7 +100,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             className={ `${isActive('/expertise') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
                            
                         >
-                            Expertise <IoMdArrowDropdown className="mt-1" />
+                            {links[2].name} <IoMdArrowDropdown className="mt-1" />
                         </span>
 
                         {expertHover && (
@@ -137,18 +138,18 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     </li>
                     <li>
                         <NavLink
-                            to="/careers"
+                            to={links[3].path}
                             className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
                         >
-                            Careers
+                            {links[3].name}
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to="/contactus"
+                            to={links[4].path}
                             className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
                         >
-                            Contact Us
+                            {links[4].name}
                         </NavLink>
                     </li>
                 </ul>
@@ -171,7 +172,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                 >
                     <ul className="space-y-4">
                         <li className="text-center">
-                            <NavLink to="/" 
+                            <NavLink to= {links[0].path}
                             // className="block "
                             className={({ isActive }) =>
                                 isActive
@@ -180,7 +181,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             }
                              onClick={() => 
                              setMenuOpen(false)}>
-                                Home
+                                {links[0].name}
                             </NavLink>
                         </li>
 
@@ -190,7 +191,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 onClick={() => setServicesAccordionOpen(!servicesAccordionOpen)}
                                 className={`flex items-center justify-center w-full ${isActive('/services') ? 'text-blue-900' : ''}`}
                             >
-                                Services <IoMdArrowDropdown />
+                                {links[1].name} <IoMdArrowDropdown />
                             </button>
                             {servicesAccordionOpen && (
                                 <motion.ul
@@ -225,7 +226,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 onClick={() => setExpertiseAccordionOpen(!expertiseAccordionOpen)}
                                 className={`flex items-center justify-center w-full ${isActive('/expertise') ? 'text-blue-900' : ''}`}
                             >
-                                Expertise <IoMdArrowDropdown />
+                                {links[2].name} <IoMdArrowDropdown />
                             </button>
                             {expertiseAccordionOpen && (
                                 <motion.ul
@@ -255,7 +256,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         </li>
 
                         <li className="text-center">
-                            <NavLink to="/careers" 
+                            <NavLink to={links[3].path}
                             className={({ isActive }) =>
                                 isActive
                                     ? "  text-blue-900 cursor-pointer"
@@ -265,11 +266,11 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 setMenuOpen(false)
 
                             }}>
-                                Careers
+                                {links[3].name}
                             </NavLink>
                         </li>
                         <li className="text-center">
-                            <NavLink to='contactus' 
+                            <NavLink to={links[4].path} 
                             className={({ isActive }) =>
                                 isActive
                                     ? "  text-blue-900 cursor-pointer"
@@ -279,7 +280,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 setMenuOpen(false)
 
                             }}>
-                                Contact Us
+                               {links[4].name}
                             </NavLink>
                         </li>
                     </ul>

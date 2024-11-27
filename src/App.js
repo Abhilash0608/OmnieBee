@@ -9,6 +9,8 @@ import Services from './pages/Services';
 import ExpertTechnologies from './pages/ExpertTechnologies';
 import './index.css'; // Ensure correct path
 import ContactUs from './pages/ContactUs';
+import Contact from './components/Contact';
+
 
 const Home = () => {
   
@@ -18,6 +20,7 @@ return (
     <Technologies />
     
     <Solutions />
+    <Contact/>
   </div>
 );
 }
