@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import hero_bg1 from "../assets/hero_bg1.jpg";
+// import herobg from "../assets/herobg.png";
 import Navbar from "./Navbar";
 import { titles } from "../utils/common";
-
-
-
-function Hero({setCurrentService}) {
+import herovideo from '../assets/herovideo.mp4'
+import { useLocation } from "react-router-dom";
+function Hero({ setCurrentService }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
+  // Determine the height class based on the route
+  const heightClass = location.pathname === "/" ? "h-[100vh]" : "h-[80vh]";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -27,20 +29,28 @@ function Hero({setCurrentService}) {
 
   return (
     <div
-      className="relative w-full h-96 bg-cover bg-center flex items-center justify-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero_bg1})`,
-      }}
-    >
+    className={`relative w-full ${heightClass} bg-cover bg-center`}
+    style={{
+      backgroundImage: "url('path_to_your_image.jpg')", // Add your background image here
+    }}
+  >
       <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />
-      <div className="p-4 flex justify-center w-full rounded-md text-center" style={{maxWidth:'1140px'}}>
-        <div className="w-full md:w-[60%] lg:w-[70%]">
-          <span className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-normal italic mt-4 font-bold">
+      <div
+  className="h-[100%] w-[100%] absolute top-0 left-0"
+  style={{
+    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))",
+  }}
+></div>
+      <video className="h-[100%] w-[100%] object-cover" src={herovideo} autoPlay muted={true} loop/>
+        {/* Left Column: Text */}
+        <div className="flex flex-col justify-center items-center text-center  absolute w-[100%] h-[100%] top-0 text-white px-8">
+          <span className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl leading-loose leading-normal italic font-bold">
             {titles[currentIndex].title}
           </span>
         </div>
+
+       
       </div>
-    </div>
   );
 }
 

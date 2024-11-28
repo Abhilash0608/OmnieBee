@@ -84,68 +84,110 @@
                 }
               ]
             },
+
+            
             "navbarData":
                 {
                     "logo": {
                       "src": "../assets/logo12.png",
                       "alt": "Omniebee Global Solutions"
                     },
-                    "links": [
-                      {
+                    
+                      "home":{
                         "name": "Home",
                         "path": "/",
                         "activeClass": "text-blue-500"
                       },
-                      {
+                     "service": {
                         "name": "Services",
                         "path": "/services",
-                        "activeClass": "text-blue-500",
-                        "subMenu": [
-                          {
-                            "name": "Service 1",
-                            "path": "/services/service1",
-                            "description": "Description for Service 1"
-                          },
-                          {
-                            "name": "Service 2",
-                            "path": "/services/service2",
-                            "description": "Description for Service 2"
-                          }
-                        ]
+                        "activeClass": "text-blue-500"
+                        
                       },
-                      {
+                     "expert": {
                         "name": "Expertise",
                         "path": "/expertise",
-                        "activeClass": "text-blue-500",
-                        "subMenu": [
-                          {
-                            "name": "Expertise 1",
-                            "path": "/expertise/expertise1",
-                            "description": "Description for Expertise 1"
-                          },
-                          {
-                            "name": "Expertise 2",
-                            "path": "/expertise/expertise2",
-                            "description": "Description for Expertise 2"
-                          }
-                        ]
+                        "activeClass": "text-blue-500"
+                      
                       },
-                      {
+                      "careers":{
                         "name": "Careers",
                         "path": "/careers",
                         "activeClass": "text-blue-500"
                       },
-                      {
+                      "contact":{
                         "name": "Contact Us",
                         "path": "/contactus",
                         "activeClass": "text-blue-500"
                       }
-                    ]
-                  }
+                    
+                  },
                   
             
           
-          
+                  
+                    "footer": {
+                      "logoAltText": "Omniebee Global Solutions",
+                      "menu": {
+                        "title": "Menu",
+                        "links": {
+                          "services": {
+                            "label": "Services",
+                            "path": "/services"
+                          },
+                          "expertise": {
+                            "label": "Expertise",
+                            "path": "/expertise"
+                          },
+                          "careers": {
+                            "label": "Careers",
+                            "path": "/careers"
+                          },
+                          "contactUs": {
+                            "label": "Contact Us",
+                            "path": "/contactus"
+                          }
+                        }
+                      },
+                      "services": {
+                        "title": "Services",
+                        "links": {
+                          "webDevelopment": {
+                            "label": "Web Development",
+                            "path": "/services"
+                          },
+                          "appDevelopment": {
+                            "label": "App Development",
+                            "path": "/services"
+                          },
+                          "technicalSupport": {
+                            "label": "Technical Support",
+                            "path": "/services"
+                          },
+                          "digitalMarketing": {
+                            "label": "Digital Marketing",
+                            "path": "/services"
+                          }
+                        }
+                      },
+                      "contact": {
+                        "title": "Contact",
+                        "address": {
+                          "text": "8-3-231/A 77 & 78, SRI KRISHNA NAGAR, YOUSUFGUDA, HYDERABAD-500045",
+                          "mapLink": "https://maps.app.goo.gl/LzA7UEAJsRvzVqQ67"
+                        },
+                        "phone": {
+                          "text": "+91 9505637481",
+                          "link": "tel:+919505637481"
+                        },
+                        "email": {
+                          "text": "info@omniebeeglobalsolutions.com",
+                          "link": "mailto:info@omniebeeglobalsolutions.com"
+                        }
+                      }
+                    }
+                  
+                  
       
       
   }

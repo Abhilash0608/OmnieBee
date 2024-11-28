@@ -12,7 +12,7 @@ const Copyright = () => {
     const { text, socialMediaLinks } = copyrightData.copyright;
 
     return (
-        <div className="bg-gray-800 text-white p-4">
+        <div className="bg-gray-900 text-white p-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 {/* Copyright Text */}
                 <p className="text-center md:text-left">

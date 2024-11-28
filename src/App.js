@@ -10,6 +10,7 @@ import ExpertTechnologies from './pages/ExpertTechnologies';
 import './index.css'; // Ensure correct path
 import ContactUs from './pages/ContactUs';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 const Home = () => {
@@ -21,6 +22,8 @@ return (
     
     <Solutions />
     <Contact/>
+    <Footer/>
+
   </div>
 );
 }

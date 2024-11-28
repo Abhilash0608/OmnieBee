@@ -30,7 +30,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
             <div className="container mx-auto flex items-center justify-between p-4">
                 <div className="text-lg font-bold">
                     <NavLink to="/">
-                        <img src={logo12} alt="Omnibee gloabl solutions" height={120} width={120} />
+                        <img src={logo12} alt="Omnibee gloabl solutions" height={140} width={140} />
                     </NavLink>
                 </div>
 
@@ -38,7 +38,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     <li>
                         <NavLink
                             to="/"
-                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-sky-600 md:text-2xl"}
                         >
                             Home
                         </NavLink>
@@ -49,7 +49,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <span  
-                         className={ `${isActive('/services') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
+                         className={ `${isActive('/services') ? 'text-sky-600 md:text-2xl flex items-center cursor-pointer' : 'hover:text-sky-600  md:text-2xl flex items-center cursor-pointer'}  `}
                        
                             >
                             Services <IoMdArrowDropdown className="mt-1" />
@@ -57,7 +57,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         {hover && (
                             <motion.div
                                 style={{ width: "400px" }}
-                                className="grid grid-cols-2 absolute rounded-lg top-6 -left-16 bg-white shadow-md space-y-2"
+                                className="grid grid-cols-2 absolute rounded-lg top-8 -left-16 bg-white shadow-md space-y-2"
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
@@ -96,7 +96,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         onMouseLeave={() => setExpertHover(false)}
                     >
                         <span
-                            className={ `${isActive('/expertise') ? 'text-blue-500 flex items-center cursor-pointer' : 'hover:text-blue-500 flex items-center cursor-pointer'}  `}
+                            className={ `${isActive('/expertise') ? 'text-sky-600 md:text-2xl flex items-center cursor-pointer' : 'hover:text-sky-600 flex md:text-2xl items-center cursor-pointer'}  `}
                            
                         >
                             Expertise <IoMdArrowDropdown className="mt-1" />
@@ -104,7 +104,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
 
                         {expertHover && (
                             <motion.div
-                                className="absolute rounded-lg top-6 -left-10 bg-white shadow-md w-72"
+                                className="absolute rounded-lg top-8 -left-10 bg-white shadow-md w-60"
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
@@ -138,7 +138,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     <li>
                         <NavLink
                             to="/careers"
-                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-text-600 md:text-2xl "}
                         >
                             Careers
                         </NavLink>
@@ -146,7 +146,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     <li>
                         <NavLink
                             to="/contactus"
-                            className={({ isActive }) => isActive ? "text-blue-500" : "hover:text-blue-500 "}
+                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-sky-600 md:text-2xl "}
                         >
                             Contact Us
                         </NavLink>
