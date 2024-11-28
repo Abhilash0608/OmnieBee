@@ -37,7 +37,7 @@ const Technologies = () => {
       >
         Finding reliable Business Solutions using trend-setting technologies.
       </motion.p>
-      <div className="grid gap-2 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-5">
+      <div className="grid gap-2 place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-5">
         {images.map((item, index) => (
           <motion.div
             key={index}

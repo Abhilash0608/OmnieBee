@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 // import herobg from "../assets/herobg.png";
 import Navbar from "./Navbar";
 import { titles } from "../utils/common";
-import herovideo from '../assets/herovideo.mp4'
 import { useLocation } from "react-router-dom";
+import hero_bg1 from '../assets/hero_bg1.jpg'
 function Hero({ setCurrentService }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,17 +31,17 @@ function Hero({ setCurrentService }) {
     <div
     className={`relative w-full ${heightClass} bg-cover bg-center`}
     style={{
-      backgroundImage: "url('path_to_your_image.jpg')", // Add your background image here
+      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('${hero_bg1}')`, // Combine gradient and background image
     }}
-  >
+>
       <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />
       <div
   className="h-[100%] w-[100%] absolute top-0 left-0"
-  style={{
-    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))",
-  }}
+  // style={{
+  //   background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))",
+  // }}
 ></div>
-      <video className="h-[100%] w-[100%] object-cover" src={herovideo} autoPlay muted={true} loop/>
+
         {/* Left Column: Text */}
         <div className="flex flex-col justify-center items-center text-center  absolute w-[100%] h-[100%] top-0 text-white px-8">
           <span className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl leading-loose leading-normal italic font-bold">

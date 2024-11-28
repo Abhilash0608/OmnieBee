@@ -10,14 +10,14 @@ const Footer = () => {
           <img
             src={logo}
             alt="Omniebee Global Solutions"
-            className="w-80 h-80"
+            className="w-80 h-80 md:w-40 md:h-40"
           />
           
         </div>
 
        
 
-        <div className=" grid md:grid-cols-2 gap-4">
+        <div className=" grid grid-cols-2 gap-4 place-items-center w-full">
         <div>
           <h4 className="text-lg font-semibold mb-4 text-white">Menu</h4>
           <ul className="space-y-2">
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
        
 
-        <div>
+        <div className="flex flex-col items-center">
           <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
           <ul className="space-y-2">
             <li>
