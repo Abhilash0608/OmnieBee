@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <div
-      className="  bg-white  w-full   bg-cover  "
+      className="  bg-zinc-200 w-full   bg-cover  "
       ref={ref}
       style={{
         backgroundImage: `url('${contactus}')`,
@@ -62,7 +62,7 @@ const Contact = () => {
         >
           {formTitle}
         </motion.h2>
-        <motion.p className="mb-6 text-gray-600 text-center" variants={fieldVariant}>
+        <motion.p className="mb-6 text-gray-600 r" variants={fieldVariant}>
           {description}
         </motion.p>
         <form className="space-y-4 w-full max-w-md">

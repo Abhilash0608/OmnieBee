@@ -29,7 +29,7 @@ const Copyright = () => {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`${link.color} ${link.hoverColor}`}
+                                className={`text-sky-600 hover:text-sky-200`}
                             >
                                 <IconComponent size={20} />
                             </a>

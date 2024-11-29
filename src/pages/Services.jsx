@@ -44,7 +44,7 @@ const Services = ({ currentService }) => {
         >
             {/* Title One */}
             <motion.h1
-                className="text-blue-500 text-xl font-semibold mb-4"
+                className="text-sky-600 text-xl font-semibold mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -68,7 +68,7 @@ const Services = ({ currentService }) => {
 
             {/* Title Two */}
             <motion.h2
-                className="text-blue-500 text-lg font-semibold mt-8 mb-4"
+                className="text-sky-600 text-lg font-semibold mt-8 mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -77,7 +77,7 @@ const Services = ({ currentService }) => {
             </motion.h2>
 
             {/* Description Two with Icons */}
-            <motion.div className="space-y-4">
+            <motion.div className="space-y-4 mb-8">
                 {serviceToRender.descriptionTwo.map((desc, index) => (
                     <motion.div
                         key={index}
@@ -85,7 +85,7 @@ const Services = ({ currentService }) => {
                         variants={lineVariant}
                         custom={index}
                     >
-                        <IoIosCheckmarkCircle className="text-blue-500 mt-1 text-lg md:text-2xl" />
+                        <IoIosCheckmarkCircle className="text-sky-600 mt-1 text-lg md:text-2xl" />
                         <p className="text-gray-700">{desc}</p>
                     </motion.div>
                 ))}

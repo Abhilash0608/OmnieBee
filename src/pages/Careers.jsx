@@ -33,7 +33,7 @@ const Careers = () => {
     };
 
     return (
-        <main className="flex flex-col w-full m-auto p-4" style={{ maxWidth: '1140px' }}>
+        <main className="flex flex-col w-full  mx-auto bg-zinc-100 px-6 py-4 " style={{ maxWidth: '1140px' }}>
             <header>
                 {/* Page Title */}
                 <motion.div
@@ -44,7 +44,7 @@ const Careers = () => {
                     custom={0}
                 >
                     <motion.h1
-                        className="text-3xl font-bold text-blue-500 mb-4"
+                        className="text-3xl font-bold text-sky-600 mb-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: 'easeInOut' }}
@@ -64,7 +64,7 @@ const Careers = () => {
             <article>
                 {/* Job Title */}
                 <motion.h2
-                    className="text-lg font-bold text-blue-500 mb-2"
+                    className="text-lg font-bold text-sky-600 mb-2"
                     variants={lineVariant}
                     custom={2}
                 >
@@ -82,7 +82,7 @@ const Careers = () => {
 
                 {/* Qualifications */}
                 <motion.h3
-                    className="text-lg font-semibold text-blue-500 mb-2"
+                    className="text-lg font-semibold text-sky-600 mb-2"
                     variants={lineVariant}
                     custom={4}
                 >
@@ -102,7 +102,7 @@ const Careers = () => {
 
                 {/* Note */}
                 <motion.p
-                    className="text-gray-700"
+                    className="text-gray-700 mb-6"
                     variants={lineVariant}
                     custom={7}
                 >

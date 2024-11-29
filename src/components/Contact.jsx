@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
+      className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-4 lg:max-w-[90vw]  gap-8"
       id="contact"
       variants={containerVariants}
       initial="hidden"
@@ -44,11 +44,11 @@ const Contact = () => {
     >
       {/* Left Grid: Form */}
       <motion.div
-        className="bg-white p-6 rounded-lg shadow-md"
+        className="bg-zinc-100 md:p-2 px-6 rounded-lg "
         variants={itemVariants}
         custom={0}
       >
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">{formTitle}</h2>
+        <h2 className="text-2xl font-bold mb-4 text-sky-600">{formTitle}</h2>
         <p className="mb-6 text-gray-700">{description}</p>
         <form className="space-y-4">
           <input
@@ -78,7 +78,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+            className="bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-900"
           >
             {buttonText}
           </button>
@@ -87,7 +87,7 @@ const Contact = () => {
 
       {/* Right Grid: Contact Info */}
       <motion.div
-        className="bg-gray-100 p-6 flex flex-col items-center justify-center rounded-lg shadow-md space-y-6"
+        className="bg-zinc-100 p-6 flex flex-col items-center justify-center rounded-lg  space-y-6"
         variants={itemVariants}
         custom={1}
       >
@@ -100,7 +100,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="cursor-pointer"
             >
-              <FaMapMarkerAlt className="text-blue-600 text-4xl" />
+              <FaMapMarkerAlt className="text-sky-600 text-4xl" />
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{address.title}</h3>
@@ -111,11 +111,11 @@ const Contact = () => {
           {/* Phone Section */}
           <div className="flex flex-col items-center justify-center gap-4 w-full">
             <a href={phone.phoneLink} className="text-gray-700 text-center">
-              <FaPhoneAlt className="text-blue-600 text-4xl" />
+              <FaPhoneAlt className="text-sky-600 text-4xl" />
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{phone.title}</h3>
-              <a href={phone.phoneLink} className="text-blue-600 text-center">
+              <a href={phone.phoneLink} className="text-sky-600 text-center">
                 {phone.number}
               </a>
             </div>
@@ -124,12 +124,12 @@ const Contact = () => {
           {/* Email Section */}
           <div className="flex flex-col items-center justify-center gap-4 w-full">
             <a href={email.emailLink}>
-              <FaEnvelope className="text-blue-600 text-4xl" />
+              <FaEnvelope className="text-sky-600 text-4xl" />
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{email.title}</h3>
               <p className="text-gray-700 text-center">
-                <a href={email.emailLink} className="text-blue-500">
+                <a href={email.emailLink} className="text-sky-600">
                   {email.address}
                 </a>
               </p>

@@ -9,21 +9,18 @@ import html from '../assets/languages/html.svg'
 import vuejs from '../assets/languages/vuejs.svg'
 import react from '../assets/languages/react.svg'
 
-import Consulting from '../assets/SERVICES/Consulting.png'
-import DigitalMarketing from '../assets/SERVICES/DigitalMarketing.png'
+import Consulting from '../assets/SERVICES/Consulting.svg'
+import DigitalMarketing from '../assets/SERVICES/digitalMarketing.svg'
+import ITconsultancy from '../assets/SERVICES/ITconsultancy.svg'
+import Technical from '../assets/SERVICES/Technical.svg'
+import WebDesign from '../assets/SERVICES/WebDesign.svg'
+import WebDevelopment from '../assets/SERVICES/WebDevlopment.svg'
 
-import ITconsultancy from '../assets/SERVICES/ITconsultancy.png'
-
-import Technical from '../assets/SERVICES/Technical.png'
-
-import WebDesign from '../assets/SERVICES/WebDesign.png'
-import WebDevelopment from '../assets/SERVICES/WebDevelopment.png'
-
-import education from '../assets/solutions/education.png'
-import finance from '../assets/solutions/finance.png'
-import healthcare from '../assets/solutions/healthcare.png'
-import retail from '../assets/solutions/retail.png'
-import travel from '../assets/solutions/travel.png'
+import education from '../assets/solutions/education.svg'
+import finance from '../assets/solutions/finance.svg'
+import healthcare from '../assets/solutions/healthcare.svg'
+import retail from '../assets/solutions/retail.svg'
+import travel from '../assets/solutions/travel.svg'
 
 
 
@@ -61,12 +58,72 @@ export const solutions = [
 
 
 export const services = [
-    { id: 1, title: "Website Design", description: "Crafting visually stunning and user-friendly websites to amplify your online presence.", src: WebDesign },
-    { id: 2, title: "Mobile App Development", description: "Delivering seamless and secure app experiences designed to captivate users.", src: WebDevelopment },
-    { id: 3, title: "Consultancy Solutions", description: "Strategic IT guidance to align technology with your business goals.", src: ITconsultancy },
-    { id: 4, title: "Digital Campaigns", description: "Innovative marketing strategies to drive impactful digital transformations.", src: DigitalMarketing },
-    { id: 5, title: "Tech Support", description: "Reliable technical assistance to ensure uninterrupted operations.", src: Technical },
-    { id: 6, title: "Business Consulting", description: "Custom strategies to enhance processes and secure your data systems.", src: Consulting },
+  { 
+      id: 1, 
+      title: "Website Design", 
+      description: [
+          "Crafting visually stunning  websites to amplify your presence.",
+          "Utilizing the latest design trends to create responsive layouts.",
+          "Implementing SEO best practices to enhance visibility.",
+          "Ensuring cross-browser compatibility for a seamless user experience."
+      ], 
+      src: WebDesign 
+  },
+  { 
+      id: 2, 
+      title: "Mobile App Development", 
+      description: [
+          "Delivering seamless and secure app experiences designed to captivate users.",
+          "Building native and cross-platform applications for wider reach.",
+          "Integrating advanced features like push notifications and in-app purchases.",
+          "Conducting thorough testing to ensure performance and reliability."
+      ], 
+      src: WebDevelopment 
+  },
+  { 
+      id: 3, 
+      title: "Consultancy Solutions", 
+      description: [
+          "Strategic IT guidance to align technology with your business goals.",
+          "Assessing current IT infrastructure for optimization opportunities.",
+          "Providing tailored recommendations for technology investments.",
+          "Supporting implementation and change management processes."
+      ], 
+      src: ITconsultancy 
+  },
+  { 
+      id: 4, 
+      title: "Digital Campaigns", 
+      description: [
+          "Innovative marketing strategies to drive impactful digital transformations.",
+          "Leveraging data analytics to target the right audience effectively.",
+          "Creating engaging content that resonates with users.",
+          "Monitoring and optimizing campaigns for maximum ROI."
+      ], 
+      src: DigitalMarketing 
+  },
+  { 
+      id: 5, 
+      title: "Tech Support", 
+      description: [
+          "Reliable technical assistance to ensure uninterrupted operations.",
+          "Providing 24/7 support for immediate issue resolution.",
+          "Offering remote and on-site assistance based on client needs.",
+          "Implementing proactive maintenance to prevent future issues."
+      ], 
+      src: Technical 
+  },
+  { 
+      id: 6, 
+      title: "Business Consulting", 
+      description: [
+          "Custom strategies to enhance processes and secure your data systems.",
+          "Conducting comprehensive assessments to identify areas for improvement.",
+          "Developing actionable plans to achieve operational efficiency.",
+          "Facilitating workshops and training sessions for staff development."
+      ], 
+      src: Consulting 
+  },
 ];
 
 

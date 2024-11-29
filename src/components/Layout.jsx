@@ -7,7 +7,7 @@ import Copyright from './CopyRight';
 const Layout = ({setCurrentService}) => {
     
   return (
-    <div className='w-full'>
+    <div className='w-full bg-zinc-100'>
       <Hero  setCurrentService={setCurrentService}/>
       <main>
         <Outlet /> {/* This will render the specific page's content */}
