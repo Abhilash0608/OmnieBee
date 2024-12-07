@@ -36,7 +36,7 @@ const ServicesCards = () => {
             ref={sectionRef} // Attach the ref to the section
         >
             <motion.h2
-                className="text-center text-2xl md:text-3xl text-sky-600 font-bold my-6"
+                className="text-center text-3xl md:text-3xl lg:text-4xl text-sky-600 font-bold my-6"
                 initial={{ opacity: 0, y: 100 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -75,7 +75,7 @@ const ServicesCards = () => {
                             </h3>
                             <div>
                                 {service.description.map((item) => (
-                                    <p className="text-gray-700 mt-4" key={item}>
+                                    <p className="text-gray-600 mt-2 text-lg md:text-xl lg:text-xl" key={item}>
                                         {item}
                                     </p>
                                 ))}

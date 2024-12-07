@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { titles } from "../utils/common";
 import { useLocation } from "react-router-dom";
-import hero_bg1 from '../assets/hero_bg1.jpg'
+import hero_bg1 from '../assets/homeimggg.jpg'
 function Hero({ setCurrentService }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +29,9 @@ function Hero({ setCurrentService }) {
 
   return (
     <div
-    className={`relative w-full ${heightClass} bg-cover bg-center`}
+    className={`relative w-full ${heightClass} bg-cover bg-no-repeat bg-center`}
     style={{
-      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('${hero_bg1}')`, // Combine gradient and background image
+      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('${hero_bg1}')`, // Combine gradient and background image
     }}
 >
       <Navbar isScrolled={isScrolled} setCurrentService={setCurrentService} />
@@ -43,8 +43,8 @@ function Hero({ setCurrentService }) {
 ></div>
 
         {/* Left Column: Text */}
-        <div className="flex flex-col justify-center items-center text-center  absolute w-[100%] h-[100%] top-0 text-white px-8">
-          <span className=" text-lg sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl leading-loose leading-normal italic font-bold">
+        <div className="flex flex-col justify-center items-center text-center  absolute w-[100%] h-[100%] top-0 text-white py-4 px-8">
+          <span className=" text-2xl  md:text-3xl lg:text-4xl max-w-4xl  italic font-bold" style={{lineHeight:'3rem'}}>
             {titles[currentIndex].title}
           </span>
         </div>

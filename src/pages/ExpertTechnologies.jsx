@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { expertiseDetails } from "../utils/common";
 import Contact from "../components/Contact";
 
-const ExpertTechnologies = ({ currentService }) => {
+const ExpertTechnologies = ({ currentService,setCurrentService }) => {
     const technologyToRender = expertiseDetails[currentService];
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page on render or update
-    }, [currentService]);
+    }, []);
 
     const lineVariant = {
         hidden: { opacity: 0, y: 10 },
@@ -26,6 +26,22 @@ const ExpertTechnologies = ({ currentService }) => {
 
     return (
         <div className="p-4 max-w-4xl mx-auto my-12" style={{ maxWidth: '1140px' }}>
+            <div className="flex justify-center gap-4 mb-8 flex-wrap">
+                {expertiseDetails.map((item, index) => (
+                    <motion.button
+                        key={item.id}
+                        onClick={() => setCurrentService(item.id)}
+                        className={`px-4 py-2 font-semibold rounded-lg ${currentService === index
+                                ? "bg-sky-600 text-white"
+                                : "bg-gray-200 text-gray-700"
+                            }`}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        {item.title}
+                    </motion.button>
+                ))}
+            </div>
             <div className="my-8 px-8">
                 {/* Title */}
                 <h2 className="text-sky-600 text-2xl font-semibold mb-4">
@@ -52,7 +68,7 @@ const ExpertTechnologies = ({ currentService }) => {
                     ))}
                 </motion.div>
             </div>
-            <Contact/>
+            <Contact />
 
         </div>
     );

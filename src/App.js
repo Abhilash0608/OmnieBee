@@ -10,8 +10,9 @@ import ExpertTechnologies from "./pages/ExpertTechnologies";
 import "./index.css"; // Ensure correct path
 import ContactUs from "./pages/ContactUs";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import About from "./components/About";
+import AboutUs from "./pages/AboutUs";
 
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -57,11 +58,11 @@ const ScrollToTop = () => {
 const Home = () => {
     return (
         <div>
+            <About/>
             <ServicesCards />
             <Technologies />
             <Solutions />
             <Contact />
-            <Footer />
         </div>
     );
 };
@@ -77,8 +78,9 @@ const App = () => {
                     element={<Layout currentService={currentService} setCurrentService={setCurrentService} />}
                 >
                     <Route index element={<Home />} />
-                    <Route path="services" element={<Services currentService={currentService} />} />
-                    <Route path="expertise" element={<ExpertTechnologies currentService={currentService} />} />
+                    <Route path="aboutus" element={<AboutUs />} />
+                    <Route path="services" element={<Services setCurrentService={setCurrentService} currentService={currentService} />} />
+                    <Route path="expertise" element={<ExpertTechnologies setCurrentService={setCurrentService} currentService={currentService} />} />
                     <Route path="contactus" element={<ContactUs />} />
                     <Route path="careers" element={<Careers />} />
                 </Route>

@@ -43,6 +43,14 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             Home
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            to="/aboutus"
+                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-sky-600  md:text-2xl"}
+                        >
+                            About Us
+                        </NavLink>
+                    </li>
                     <li
                         className="group relative"
                         onMouseEnter={handleMouseEnter}
@@ -213,7 +221,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     <li>
                         <NavLink
                             to="/careers"
-                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-text-600 md:text-2xl "}
+                            className={({ isActive }) => isActive ? "text-sky-600 md:text-2xl" : "hover:text-sky-600 md:text-2xl "}
                         >
                             Careers
                         </NavLink>
@@ -245,7 +253,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                     className="md:hidden bg-sky-600 rounded-lg text-white py-3"
                 >
                     <ul className="space-y-4">
-                        <li className="text-center">
+                        <li className="text-center text-lg">
                             <NavLink to="/"
                                 // className="block "
                                 className={({ isActive }) =>
@@ -260,7 +268,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         </li>
 
                         {/* Services Accordion */}
-                        <li className="flex flex-col items-center">
+                        <li className="flex flex-col items-center text-lg">
                             <button
                                 onClick={() => setServicesAccordionOpen(!servicesAccordionOpen)}
                                 className={`flex items-center justify-center w-full ${isActive('/services') ? 'text-blue-950' : ''}`}
@@ -295,7 +303,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                         </li>
 
                         {/* Expertise Accordion */}
-                        <li className="flex flex-col items-center">
+                        <li className="flex flex-col items-center text-lg">
                             <button
                                 onClick={() => setExpertiseAccordionOpen(!expertiseAccordionOpen)}
                                 className={`flex items-center justify-center w-full ${isActive('/expertise') ? 'text-blue-950' : ''}`}
@@ -329,7 +337,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                             )}
                         </li>
 
-                        <li className="text-center">
+                        <li className="text-center text-lg">
                             <NavLink to="/careers"
                                 className={({ isActive }) =>
                                     isActive
@@ -343,7 +351,7 @@ const Navbar = ({ isScrolled, setCurrentService }) => {
                                 Careers
                             </NavLink>
                         </li>
-                        <li className="text-center">
+                        <li className="text-center text-lg ">
                             <NavLink to='contactus'
                                 className={({ isActive }) =>
                                     isActive

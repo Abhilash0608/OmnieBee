@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import contactData from "../app.json"; // Import the contact JSON
-import contactus from '../assets/contactus.png'
+import contactus from '../assets/contactus.png';
+
 const Contact = () => {
   const {
     pageTitle,
@@ -43,72 +44,69 @@ const Contact = () => {
 
   return (
     <div
-      className="  bg-zinc-200 w-full   bg-cover  "
+      className="bg-zinc-200 w-full bg-none lg:bg-contain md:bg-contain lg:bg-no-reapeat md:bg-no-repeat md:bg-center lg:bg-center"
       ref={ref}
       style={{
         backgroundImage: `url('${contactus}')`,
       }}
     >
-        <div className="max-w-[90vw] mx-auto">
-       <motion.div
-        className="bg-none  p-8 rounded-lg  flex flex-col justify-center items-start "
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <motion.h2
-          className="text-3xl font-bold mb-6 text-sky-600"
-          variants={fieldVariant}
+      <div className="max-w-[90vw] mx-auto">
+        <motion.div
+          className="bg-none px-8 py-16 rounded-lg flex flex-col justify-center items-start"
+          variants={containerVariants}
+          initial="hidden"
+          animate={controls}
         >
-          {formTitle}
-        </motion.h2>
-        <motion.p className="mb-6 text-gray-600 r" variants={fieldVariant}>
-          {description}
-        </motion.p>
-        <form className="space-y-4 w-full max-w-md">
-          <motion.input
-            type="text"
-            placeholder={fields.namePlaceholder}
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-            variants={fieldVariant}
-          />
-          <motion.input
-            type="email"
-            placeholder={fields.emailPlaceholder}
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-            variants={fieldVariant}
-          />
-          <motion.input
-            type="tel"
-            placeholder={fields.phonePlaceholder}
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-            variants={fieldVariant}
-          />
-          <motion.input
-            type="text"
-            placeholder={fields.subjectPlaceholder}
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-            variants={fieldVariant}
-          />
-          <motion.textarea
-            placeholder={fields.messagePlaceholder}
-            rows="5"
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
-            variants={fieldVariant}
-          ></motion.textarea>
-          <motion.button
-            type="submit"
-            className="bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+          <motion.h2
+            className="text-3xl font-bold mb-6 text-sky-600"
             variants={fieldVariant}
           >
-            {buttonText}
-          </motion.button>
-        </form>
-      </motion.div>
-
-     
-        </div>
-     
+            {formTitle}
+          </motion.h2>
+          <motion.p className="mb-6 text-gray-600" variants={fieldVariant}>
+            {description}
+          </motion.p>
+          <form className="space-y-4 w-full max-w-md">
+            <motion.input
+              type="text"
+              placeholder={fields.namePlaceholder}
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+              variants={fieldVariant}
+            />
+            <motion.input
+              type="email"
+              placeholder={fields.emailPlaceholder}
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+              variants={fieldVariant}
+            />
+            <motion.input
+              type="tel"
+              placeholder={fields.phonePlaceholder}
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+              variants={fieldVariant}
+            />
+            <motion.input
+              type="text"
+              placeholder={fields.subjectPlaceholder}
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+              variants={fieldVariant}
+            />
+            <motion.textarea
+              placeholder={fields.messagePlaceholder}
+              rows="5"
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+              variants={fieldVariant}
+            ></motion.textarea>
+            <motion.button
+              type="submit"
+              className="bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+              variants={fieldVariant}
+            >
+              {buttonText}
+            </motion.button>
+          </form>
+        </motion.div>
+      </div>
     </div>
   );
 };

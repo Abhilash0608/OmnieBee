@@ -48,8 +48,8 @@ const Contact = () => {
         variants={itemVariants}
         custom={0}
       >
-        <h2 className="text-2xl font-bold mb-4 text-sky-600">{formTitle}</h2>
-        <p className="mb-6 text-gray-700">{description}</p>
+        <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold mb-4 text-sky-600">{formTitle}</h2>
+        <p className="mb-6 text-gray-600 text-lg md:text-xl lg:text-xl">{description}</p>
         <form className="space-y-4">
           <input
             type="text"
@@ -104,18 +104,18 @@ const Contact = () => {
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{address.title}</h3>
-              <p className="text-gray-700 text-center">{address.description}</p>
+              <p className="text-gray-700 text-center text-lg md:text-xl lg:text-xl">{address.description}</p>
             </div>
           </div>
 
           {/* Phone Section */}
           <div className="flex flex-col items-center justify-center gap-4 w-full">
-            <a href={phone.phoneLink} className="text-gray-700 text-center">
+            <a href={phone.phoneLink} className="text-gray-600 text-center">
               <FaPhoneAlt className="text-sky-600 text-4xl" />
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{phone.title}</h3>
-              <a href={phone.phoneLink} className="text-sky-600 text-center">
+              <a href={phone.phoneLink} className="text-sky-600 text-center text-lg md:text-xl lg:text-xl">
                 {phone.number}
               </a>
             </div>
@@ -128,11 +128,9 @@ const Contact = () => {
             </a>
             <div className="flex flex-col items-center">
               <h3 className="font-bold">{email.title}</h3>
-              <p className="text-gray-700 text-center">
-                <a href={email.emailLink} className="text-sky-600">
+                <a href={email.emailLink} className="text-sky-600 text-center text-lg md:text-xl lg:text-xl">
                   {email.address}
                 </a>
-              </p>
             </div>
           </div>
         </div>

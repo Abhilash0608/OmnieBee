@@ -29,7 +29,7 @@ const Solutions = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center py-12 px-4 ">
+        <div className="relative flex flex-col  bg-white items-center justify-center py-12 px-4 ">
             {/* Title Section */}
             <motion.div
                 className="text-center mb-8"
@@ -37,8 +37,8 @@ const Solutions = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h1 className="text-xl md:text-3xl font-bold mb-4">
-                    Delivering Best <span className="text-sky-600">IT SOLUTIONS</span>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                    Delivering Best <span className=" text-2xl md:text-4xl lg:text-4xl text-sky-600">IT SOLUTIONS</span>
                 </h1>
             </motion.div>
 
@@ -68,7 +68,7 @@ const Solutions = () => {
                     <h3 className="text-lg font-semibold mb-2">
                         {solutions[currentIndex].title}
                     </h3>
-                    <p className="text-gray-600 text-center text-sm">
+                    <p className="text-gray-600 text-center text-lg md:text-xl lg:text-xl">
                         {solutions[currentIndex].description}
                     </p>
                 </motion.div>

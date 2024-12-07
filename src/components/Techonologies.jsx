@@ -17,7 +17,7 @@ const Technologies = () => {
   return (
     <div ref={sectionRef} className="w-full px-4 py-8 ">
       <motion.h2
-        className="text-3xl md:text-3xl text-sky-600 font-bold text-center mb-4"
+        className="text-3xl md:text-4xl lg:text-4xl text-sky-600 font-bold text-center mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 1, ease: "easeInOut" }}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Hero from './Hero';
 import Copyright from './CopyRight';
+import Footer from './Footer';
 
 
 const Layout = ({setCurrentService}) => {
@@ -12,6 +13,8 @@ const Layout = ({setCurrentService}) => {
       <main>
         <Outlet /> {/* This will render the specific page's content */}
       </main>
+      <Footer />
+      
       <Copyright />
     </div>
   );
